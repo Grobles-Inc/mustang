@@ -11,6 +11,10 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false
     }
+
+  },
+  image: {
+    domains: ['www.kindpng.com', 'www.pngmart.com', 'images.pexels.com'],
   },
   vite: {
     plugins: [tailwindcss()]
