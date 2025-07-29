@@ -1,0 +1,406 @@
+---
+import Page from "../layouts/Page.astro";
+---
+
+<Page
+  title="Book Appointment - CARWASH"
+  description="Book your car wash appointment online - quick and easy scheduling"
+>
+  <main class="min-h-screen bg-base-100">
+    <!-- Hero Section -->
+    <section
+      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
+    >
+      <div class="hero-content text-center">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold">Book Your Appointment</h1>
+          <p class="py-6 text-lg">
+            Schedule your car wash service in just a few clicks
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="py-16 px-4 lg:px-8">
+      <div class="container mx-auto max-w-4xl">
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title text-3xl text-primary mb-8 justify-center">
+              Schedule Your Service
+            </h2>
+
+            <form class="space-y-6">
+              <!-- Personal Information -->
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">First Name *</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="John"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Last Name *</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Doe"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Email *</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="john.doe@example.com"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Phone *</span>
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="(555) 123-4567"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Vehicle Information -->
+              <div class="divider">
+                <span class="text-lg font-semibold text-primary"
+                  >Vehicle Information</span
+                >
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Make *</span>
+                  </label>
+                  <select class="select select-bordered w-full" required>
+                    <option disabled selected>Select make</option>
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Ford</option>
+                    <option>Chevrolet</option>
+                    <option>BMW</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Audi</option>
+                    <option>Nissan</option>
+                    <option>Hyundai</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Model *</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Camry"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Year</span>
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="2020"
+                    min="1990"
+                    max="2024"
+                    class="input input-bordered w-full"
+                  />
+                </div>
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">License Plate</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="ABC123"
+                  class="input input-bordered w-full max-w-xs"
+                />
+              </div>
+
+              <!-- Service Selection -->
+              <div class="divider">
+                <span class="text-lg font-semibold text-primary"
+                  >Service Selection</span
+                >
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium"
+                    >Choose Your Package *</span
+                  >
+                </label>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="package"
+                      value="basic"
+                      class="radio radio-primary"
+                      required
+                    />
+                    <div
+                      class="card bg-base-100 shadow-md border-2 border-transparent hover:border-primary ml-2"
+                    >
+                      <div class="card-body p-4">
+                        <h3 class="font-bold">Express Wash</h3>
+                        <p class="text-sm opacity-70">Basic exterior wash</p>
+                        <div class="text-xl font-bold text-primary">$15</div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="package"
+                      value="premium"
+                      class="radio radio-primary"
+                    />
+                    <div
+                      class="card bg-base-100 shadow-md border-2 border-transparent hover:border-primary ml-2"
+                    >
+                      <div class="card-body p-4">
+                        <h3 class="font-bold">Premium Wash</h3>
+                        <p class="text-sm opacity-70">Interior + exterior</p>
+                        <div class="text-xl font-bold text-primary">$25</div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="package"
+                      value="deluxe"
+                      class="radio radio-primary"
+                    />
+                    <div
+                      class="card bg-base-100 shadow-md border-2 border-transparent hover:border-primary ml-2"
+                    >
+                      <div class="card-body p-4">
+                        <h3 class="font-bold">Full Detail</h3>
+                        <p class="text-sm opacity-70">Complete service</p>
+                        <div class="text-xl font-bold text-primary">$45</div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Additional Services -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium"
+                    >Additional Services (Optional)</span
+                  >
+                </label>
+                <div class="grid md:grid-cols-2 gap-3">
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Ceramic Coating (+$150)</span>
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Paint Correction (+$200)</span>
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Headlight Restoration (+$75)</span>
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Pet Hair Removal (+$35)</span>
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                </div>
+              </div>
+
+              <!-- Appointment Details -->
+              <div class="divider">
+                <span class="text-lg font-semibold text-primary"
+                  >Appointment Details</span
+                >
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Location *</span>
+                </label>
+                <select class="select select-bordered w-full" required>
+                  <option disabled selected>Choose location</option>
+                  <option>Downtown Location - 123 Main Street</option>
+                  <option>Westside Location - 456 West Avenue</option>
+                  <option>Eastside Location - 789 East Boulevard</option>
+                </select>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Preferred Date *</span>
+                  </label>
+                  <input
+                    type="date"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Preferred Time *</span>
+                  </label>
+                  <select class="select select-bordered w-full" required>
+                    <option disabled selected>Select time</option>
+                    <option>8:00 AM</option>
+                    <option>9:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>1:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                    <option>5:00 PM</option>
+                    <option>6:00 PM</option>
+                    <option>7:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Special Instructions -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium"
+                    >Special Instructions</span
+                  >
+                </label>
+                <textarea
+                  class="textarea textarea-bordered h-24"
+                  placeholder="Any special requests or notes about your vehicle..."
+                ></textarea>
+              </div>
+
+              <!-- Terms and Submit -->
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input
+                    type="checkbox"
+                    class="checkbox checkbox-primary"
+                    required
+                  />
+                  <span class="label-text"
+                    >I agree to the <a href="#" class="link link-primary"
+                      >terms and conditions</a
+                    > and <a href="#" class="link link-primary"
+                      >privacy policy</a
+                    > *</span
+                  >
+                </label>
+              </div>
+
+              <div class="form-control mt-8">
+                <button class="btn btn-primary btn-lg">Book Appointment</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title justify-center text-primary">
+                Quick Service
+              </h3>
+              <p>Most services completed in 15-45 minutes</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title justify-center text-primary">
+                Satisfaction Guaranteed
+              </h3>
+              <p>100% satisfaction guarantee on all services</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                ></path>
+              </svg>
+              <h3 class="card-title justify-center text-primary">
+                Easy Rescheduling
+              </h3>
+              <p>Call us anytime to reschedule your appointment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Page>
+

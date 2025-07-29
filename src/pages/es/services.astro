@@ -1,0 +1,400 @@
+---
+import Page from "../../layouts/Page.astro";
+---
+
+<Page
+  title="Servicios - CARWASH"
+  description="Explora nuestros servicios integrales de lavado y detallado de automóviles"
+>
+  <main class="min-h-screen bg-base-100">
+    <!-- Hero Section -->
+    <section
+      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
+    >
+      <div class="hero-content text-center">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold">Nuestros Servicios</h1>
+          <p class="py-6 text-lg">
+            Servicios premium de cuidado automotriz adaptados a tus necesidades
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 px-4 lg:px-8">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-primary mb-4">Elige Tu Paquete</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Basic Package -->
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <div class="text-center">
+                <div class="badge badge-secondary mb-4">BÁSICO</div>
+                <h2 class="card-title text-2xl text-primary justify-center">
+                  Lavado Express
+                </h2>
+                <div class="text-4xl font-bold text-primary my-4">$15</div>
+              </div>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Lavado exterior
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Enjuague y secado
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Brillo de llantas
+                </li>
+                <li class="flex items-center gap-2 opacity-50">
+                  <svg
+                    class="size-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Limpieza interior
+                </li>
+                <li class="flex items-center gap-2 opacity-50">
+                  <svg
+                    class="size-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Protección con cera
+                </li>
+              </ul>
+
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary btn-wide">Elegir Básico</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Package -->
+          <div class="card bg-base-200 shadow-xl border-2 border-primary">
+            <div class="card-body">
+              <div class="text-center">
+                <div class="badge badge-primary mb-4">POPULAR</div>
+                <h2 class="card-title text-2xl text-primary justify-center">
+                  Lavado Premium
+                </h2>
+                <div class="text-4xl font-bold text-primary my-4">$25</div>
+              </div>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Todo lo del Básico
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Aspirado interior
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Limpieza de ventanas
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Limpieza de tablero
+                </li>
+                <li class="flex items-center gap-2 opacity-50">
+                  <svg
+                    class="size-5 text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Protección con cera
+                </li>
+              </ul>
+
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary btn-wide">Elegir Premium</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deluxe Package -->
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <div class="text-center">
+                <div class="badge badge-accent mb-4">DELUXE</div>
+                <h2 class="card-title text-2xl text-primary justify-center">
+                  Detallado Completo
+                </h2>
+                <div class="text-4xl font-bold text-primary my-4">$45</div>
+              </div>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Todo lo del Premium
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Protección cera premium
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Acondicionado de cuero
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Limpieza de motor
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-green-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Ambientador
+                </li>
+              </ul>
+
+              <div class="card-actions justify-center">
+                <button class="btn btn-primary btn-wide">Elegir Deluxe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-primary mb-4">
+            Servicios Adicionales
+          </h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body text-center">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title text-lg justify-center">
+                Recubrimiento Cerámico
+              </h3>
+              <p class="text-sm opacity-70 mb-2">Protección duradera</p>
+              <div class="text-2xl font-bold text-primary">$150</div>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body text-center">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h3 class="card-title text-lg justify-center">
+                Corrección de Pintura
+              </h3>
+              <p class="text-sm opacity-70 mb-2">Elimina rayones y remolinos</p>
+              <div class="text-2xl font-bold text-primary">$200</div>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body text-center">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title text-lg justify-center">
+                Restauración de Faros
+              </h3>
+              <p class="text-sm opacity-70 mb-2">Visibilidad cristalina</p>
+              <div class="text-2xl font-bold text-primary">$75</div>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body text-center">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title text-lg justify-center">
+                Remoción Pelo Mascotas
+              </h3>
+              <p class="text-sm opacity-70 mb-2">Servicio limpieza profunda</p>
+              <div class="text-2xl font-bold text-primary">$35</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-primary mb-4">
+          ¿Listo para comenzar?
+        </h2>
+        <p class="text-lg mb-8 max-w-2xl mx-auto">
+          Reserva tu cita hoy y experimenta la diferencia que hace el cuidado
+          profesional de automóviles.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/es/book" class="btn btn-primary btn-lg">Reservar Ahora</a>
+          <a href="/es/contact" class="btn btn-outline btn-lg">Contáctanos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Page>
+

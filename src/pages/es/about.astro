@@ -1,0 +1,173 @@
+---
+import Page from "../../layouts/Page.astro";
+---
+
+<Page
+  title="Nosotros - CARWASH"
+  description="Conoce nuestra historia, misión y compromiso con el cuidado de calidad de automóviles"
+>
+  <main class="min-h-screen bg-base-100">
+    <!-- Hero Section -->
+    <section
+      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
+    >
+      <div class="hero-content text-center">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold">Acerca de CARWASH</h1>
+          <p class="py-6 text-lg">
+            Tu socio de confianza en cuidado premium de automóviles desde 2010
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 px-4 lg:px-8">
+      <div class="container mx-auto max-w-4xl">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-primary mb-4">Nuestra Historia</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="prose lg:prose-xl mx-auto">
+          <p class="text-lg leading-relaxed">
+            Fundada en 2010, CARWASH comenzó como un pequeño negocio familiar
+            con una misión simple: brindar los servicios de limpieza de
+            automóviles de la más alta calidad en la comunidad. Lo que comenzó
+            como una sola ubicación ha crecido hasta convertirse en una red
+            confiable de centros de cuidado premium de automóviles.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Creemos que tu automóvil merece el mejor cuidado posible. Por eso
+            utilizamos solo productos ecológicos, equipos de última generación y
+            empleamos profesionales capacitados que comparten nuestra pasión por
+            la excelencia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-primary mb-4">
+            Nuestra Misión y Valores
+          </h2>
+          <div class="divider"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card bg-base-100 shadow-xl">
+            <div class="card-body text-center">
+              <div class="mx-auto mb-4">
+                <svg
+                  class="size-16 text-primary mx-auto"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 class="card-title text-primary justify-center">Calidad</h3>
+              <p>
+                Nunca comprometemos la calidad. Cada servicio se realiza con los
+                más altos estándares.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-xl">
+            <div class="card-body text-center">
+              <div class="mx-auto mb-4">
+                <svg
+                  class="size-16 text-primary mx-auto"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="card-title text-primary justify-center">Confianza</h3>
+              <p>
+                Construyendo relaciones duraderas a través del servicio honesto
+                y precios transparentes.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-xl">
+            <div class="card-body text-center">
+              <div class="mx-auto mb-4">
+                <svg
+                  class="size-16 text-primary mx-auto"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 class="card-title text-primary justify-center">Cuidado</h3>
+              <p>
+                Tratamos cada vehículo con el mismo cuidado y atención que le
+                daríamos al nuestro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="stats stats-vertical lg:stats-horizontal shadow w-full">
+          <div class="stat">
+            <div class="stat-figure text-primary">
+              <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="stat-title">Autos Lavados</div>
+            <div class="stat-value text-primary">50K+</div>
+            <div class="stat-desc">Desde 2010</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-figure text-secondary">
+              <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="stat-title">Clientes Satisfechos</div>
+            <div class="stat-value text-secondary">12K+</div>
+            <div class="stat-desc">Y contando</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-figure text-accent">
+              <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="stat-title">Ubicaciones</div>
+            <div class="stat-value text-accent">3</div>
+            <div class="stat-desc">En toda la ciudad</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Page>
+

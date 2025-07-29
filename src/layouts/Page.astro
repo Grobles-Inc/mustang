@@ -1,0 +1,45 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MobileDrawer from "../components/MobileDrawer.astro";
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title } = Astro.props;
+const currentLocale = Astro.currentLocale || "en";
+---
+
+<!doctype html>
+<html lang={currentLocale} data-theme="carwash">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="drawer">
+      <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content flex flex-col">
+        <!-- Header -->
+        <Header />
+
+        <!-- Main Content -->
+        <main class="flex-1">
+          <slot />
+        </main>
+
+        <!-- Footer -->
+        <Footer />
+      </div>
+
+      <!-- Mobile Drawer -->
+      <MobileDrawer />
+    </div>
+  </body>
+</html>

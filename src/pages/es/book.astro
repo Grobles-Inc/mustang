@@ -1,0 +1,411 @@
+---
+import Page from "../../layouts/Page.astro";
+---
+
+<Page
+  title="Reservar Cita - CARWASH"
+  description="Reserva tu cita de lavado de auto en línea - programación rápida y fácil"
+>
+  <main class="min-h-screen bg-base-100">
+    <!-- Hero Section -->
+    <section
+      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
+    >
+      <div class="hero-content text-center">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl font-bold">Reserva Tu Cita</h1>
+          <p class="py-6 text-lg">
+            Programa tu servicio de lavado de auto en solo unos clics
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="py-16 px-4 lg:px-8">
+      <div class="container mx-auto max-w-4xl">
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title text-3xl text-primary mb-8 justify-center">
+              Programa Tu Servicio
+            </h2>
+
+            <form class="space-y-6">
+              <!-- Personal Information -->
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Nombre *</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Juan"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Apellido *</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Pérez"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium"
+                      >Correo Electrónico *</span
+                    >
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="juan.perez@ejemplo.com"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Teléfono *</span>
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="(555) 123-4567"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Vehicle Information -->
+              <div class="divider">
+                <span class="text-lg font-semibold text-primary"
+                  >Información del Vehículo</span
+                >
+              </div>
+
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Marca *</span>
+                  </label>
+                  <select class="select select-bordered w-full" required>
+                    <option disabled selected>Seleccionar marca</option>
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Ford</option>
+                    <option>Chevrolet</option>
+                    <option>BMW</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Audi</option>
+                    <option>Nissan</option>
+                    <option>Hyundai</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Modelo *</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Camry"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Año</span>
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="2020"
+                    min="1990"
+                    max="2024"
+                    class="input input-bordered w-full"
+                  />
+                </div>
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Placa</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="ABC123"
+                  class="input input-bordered w-full max-w-xs"
+                />
+              </div>
+
+              <!-- Service Selection -->
+              <div class="divider">
+                <span class="text-lg font-semibold text-primary"
+                  >Selección de Servicio</span
+                >
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Elige Tu Paquete *</span>
+                </label>
+                <div class="grid md:grid-cols-3 gap-4">
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="package"
+                      value="basic"
+                      class="radio radio-primary"
+                      required
+                    />
+                    <div
+                      class="card bg-base-100 shadow-md border-2 border-transparent hover:border-primary ml-2"
+                    >
+                      <div class="card-body p-4">
+                        <h3 class="font-bold">Lavado Express</h3>
+                        <p class="text-sm opacity-70">Lavado exterior básico</p>
+                        <div class="text-xl font-bold text-primary">$15</div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="package"
+                      value="premium"
+                      class="radio radio-primary"
+                    />
+                    <div
+                      class="card bg-base-100 shadow-md border-2 border-transparent hover:border-primary ml-2"
+                    >
+                      <div class="card-body p-4">
+                        <h3 class="font-bold">Lavado Premium</h3>
+                        <p class="text-sm opacity-70">Interior + exterior</p>
+                        <div class="text-xl font-bold text-primary">$25</div>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="package"
+                      value="deluxe"
+                      class="radio radio-primary"
+                    />
+                    <div
+                      class="card bg-base-100 shadow-md border-2 border-transparent hover:border-primary ml-2"
+                    >
+                      <div class="card-body p-4">
+                        <h3 class="font-bold">Detallado Completo</h3>
+                        <p class="text-sm opacity-70">Servicio completo</p>
+                        <div class="text-xl font-bold text-primary">$45</div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Additional Services -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium"
+                    >Servicios Adicionales (Opcional)</span
+                  >
+                </label>
+                <div class="grid md:grid-cols-2 gap-3">
+                  <label class="cursor-pointer label">
+                    <span class="label-text"
+                      >Recubrimiento Cerámico (+$150)</span
+                    >
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Corrección de Pintura (+$200)</span
+                    >
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Restauración de Faros (+$75)</span>
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                  <label class="cursor-pointer label">
+                    <span class="label-text">Remoción Pelo Mascotas (+$35)</span
+                    >
+                    <input type="checkbox" class="checkbox checkbox-primary" />
+                  </label>
+                </div>
+              </div>
+
+              <!-- Appointment Details -->
+              <div class="divider">
+                <span class="text-lg font-semibold text-primary"
+                  >Detalles de la Cita</span
+                >
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium">Ubicación *</span>
+                </label>
+                <select class="select select-bordered w-full" required>
+                  <option disabled selected>Elegir ubicación</option>
+                  <option>Ubicación Centro - 123 Calle Principal</option>
+                  <option>Ubicación Oeste - 456 Avenida Oeste</option>
+                  <option>Ubicación Este - 789 Boulevard Este</option>
+                </select>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Fecha Preferida *</span
+                    >
+                  </label>
+                  <input
+                    type="date"
+                    class="input input-bordered w-full"
+                    required
+                  />
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-medium">Hora Preferida *</span>
+                  </label>
+                  <select class="select select-bordered w-full" required>
+                    <option disabled selected>Seleccionar hora</option>
+                    <option>8:00 AM</option>
+                    <option>9:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>1:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                    <option>5:00 PM</option>
+                    <option>6:00 PM</option>
+                    <option>7:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Special Instructions -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-medium"
+                    >Instrucciones Especiales</span
+                  >
+                </label>
+                <textarea
+                  class="textarea textarea-bordered h-24"
+                  placeholder="Cualquier solicitud especial o notas sobre tu vehículo..."
+                ></textarea>
+              </div>
+
+              <!-- Terms and Submit -->
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input
+                    type="checkbox"
+                    class="checkbox checkbox-primary"
+                    required
+                  />
+                  <span class="label-text"
+                    >Acepto los <a href="#" class="link link-primary"
+                      >términos y condiciones</a
+                    > y la <a href="#" class="link link-primary"
+                      >política de privacidad</a
+                    > *</span
+                  >
+                </label>
+              </div>
+
+              <div class="form-control mt-8">
+                <button class="btn btn-primary btn-lg">Reservar Cita</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title justify-center text-primary">
+                Servicio Rápido
+              </h3>
+              <p>La mayoría de servicios se completan en 15-45 minutos</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <h3 class="card-title justify-center text-primary">
+                Satisfacción Garantizada
+              </h3>
+              <p>100% garantía de satisfacción en todos los servicios</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-lg">
+            <div class="card-body">
+              <svg
+                class="size-12 text-primary mx-auto mb-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                ></path>
+              </svg>
+              <h3 class="card-title justify-center text-primary">
+                Fácil Reprogramación
+              </h3>
+              <p>Llámanos en cualquier momento para reprogramar tu cita</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Page>
+

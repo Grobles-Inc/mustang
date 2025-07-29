@@ -1,0 +1,182 @@
+---
+import Page from "../../layouts/Page.astro";
+---
+
+<Page
+  title="Ubicaciones - CARWASH"
+  description="Encuentra nuestras ubicaciones de lavado de autos cerca de ti"
+>
+  <main class="min-h-screen bg-base-100">
+    <!-- Hero Section -->
+    <section
+      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
+    >
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Nuestras Ubicaciones</h1>
+          <p class="py-6 text-lg">
+            Encuentra la ubicación CARWASH más cercana a ti
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations Grid -->
+    <section class="py-16 px-4 lg:px-8">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Location 1 -->
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title text-primary">Ubicación Centro</h2>
+              <div class="space-y-2">
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  123 Calle Principal, Centro
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Lun-Dom: 8AM - 8PM
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    ></path>
+                  </svg>
+                  (555) 123-4567
+                </p>
+              </div>
+              <div class="card-actions justify-end mt-4">
+                <button class="btn btn-primary">Obtener Direcciones</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location 2 -->
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title text-primary">Ubicación Oeste</h2>
+              <div class="space-y-2">
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  456 Avenida Oeste, Zona Oeste
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Lun-Dom: 7AM - 9PM
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    ></path>
+                  </svg>
+                  (555) 987-6543
+                </p>
+              </div>
+              <div class="card-actions justify-end mt-4">
+                <button class="btn btn-primary">Obtener Direcciones</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location 3 -->
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body">
+              <h2 class="card-title text-primary">Ubicación Este</h2>
+              <div class="space-y-2">
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  789 Boulevard Este, Zona Este
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Lun-Dom: 8AM - 8PM
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg
+                    class="size-5 text-primary"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    ></path>
+                  </svg>
+                  (555) 456-7890
+                </p>
+              </div>
+              <div class="card-actions justify-end mt-4">
+                <button class="btn btn-primary">Obtener Direcciones</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Page>
+

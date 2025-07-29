@@ -1,0 +1,234 @@
+---
+import Page from "@layouts/Page.astro";
+---
+
+<Page
+  title="Carwash - Servicios Profesionales de Lavado de Autos"
+  description="Carwash es un servicio profesional de lavado de autos que ofrece una gama de servicios para mantener tu auto limpio y en su mejor estado."
+>
+  <div class="hero min-h-screen bg-base-100 relative overflow-hidden">
+    <div class="hero-content max-w-7xl mx-auto px-4 lg:px-8 w-full">
+      <div
+        class="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center w-full"
+      >
+        <!-- Car Image - First on mobile, second on desktop -->
+        <div
+          class="order-1 lg:order-2 relative lg:h-[600px] h-[400px] w-full flex items-center justify-center"
+          id="car-container"
+        >
+          <!-- Car image -->
+          <div
+            class="relative z-10 w-full h-full flex items-center justify-center p-8"
+            id="car-image"
+          >
+            <img
+              src="https://www.pngmart.com/files/10/Red-Ford-Mustang-PNG-Picture.png"
+              alt="Auto deportivo rojo - Servicios profesionales de lavado de autos"
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Content - Second on mobile, first on desktop -->
+        <div
+          class="order-2 lg:order-1 space-y-8 text-center lg:text-left"
+          id="hero-content"
+        >
+          <h1
+            class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight"
+            id="hero-title"
+          >
+            Mantén Tu
+            <span class="text-primary">Auto Limpio</span>
+            Siempre
+          </h1>
+          <p
+            class="text-lg text-base-content/70 max-w-lg leading-relaxed mx-auto lg:mx-0"
+            id="hero-description"
+          >
+            Fillco car wash es una marca que va a cambiar literalmente la forma
+            en que la gente piensa sobre la limpieza de autos.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start"
+            id="hero-cta"
+          >
+            <a
+              href="/es/book"
+              class="btn btn-primary btn-lg gap-2"
+              id="book-button"
+            >
+              Reservar Lavado
+              <svg
+                class="size-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+          <div
+            class="flex gap-6 text-sm justify-center lg:justify-start"
+            id="contact-info"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                class="size-5 text-primary"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                ></path>
+              </svg>
+              <div>
+                <div class="font-medium">LLÁMANOS AHORA AL</div>
+                <div class="text-primary font-bold">+18076320103</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                class="size-5 text-primary"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 100-4 2 2 0 000 4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <div>
+                <div class="font-medium">NUESTRA UBICACIÓN</div>
+                <div class="text-primary font-bold">Shilaganj, Sylhet</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { animate, stagger, inView } from "motion";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Hero title animation
+      animate(
+        document.querySelector("#hero-title"),
+        { opacity: [0, 1], y: [50, 0], scale: [0.9, 1] },
+        { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] },
+      );
+
+      // Description animation
+      animate(
+        document.querySelector("#hero-description"),
+        { opacity: [0, 1], y: [30, 0] },
+        { duration: 0.6, delay: 0.2, easing: [0.25, 0.46, 0.45, 0.94] },
+      );
+
+      // CTA button animation
+      animate(
+        document.querySelector("#hero-cta"),
+        { opacity: [0, 1], y: [20, 0], scale: [0.95, 1] },
+        { duration: 0.7, delay: 0.4, easing: [0.34, 1.56, 0.64, 1] },
+      );
+
+      // Contact info staggered animation
+      const contactDivs = document.querySelectorAll("#contact-info > div");
+      animate(
+        contactDivs,
+        { opacity: [0, 1], y: [15, 0] },
+        {
+          duration: 0.5,
+          delay: stagger(0.1, 0.6),
+          easing: [0.25, 0.46, 0.45, 0.94],
+        },
+      );
+
+      // Car image animation
+      animate(
+        document.querySelector("#car-image"),
+        { opacity: [0, 1], x: [100, 0], scale: [0.9, 1] },
+        { duration: 1, delay: 0.3, easing: [0.25, 0.46, 0.45, 0.94] },
+      ).finished.then(() => {
+        animate(
+          document.querySelector("#car-image"),
+          { y: [0, -8, 0], rotate: [0, 1, 0, -1, 0] },
+          { duration: 4, repeat: Infinity, easing: [0.45, 0.05, 0.55, 0.95] },
+        );
+      });
+
+      // Button hover effects
+      const bookButton = document.getElementById("book-button");
+      if (bookButton) {
+        bookButton.addEventListener("mouseenter", () => {
+          animate(
+            bookButton,
+            { scale: 1.05 },
+            { duration: 0.2, easing: [0.25, 0.46, 0.45, 0.94] },
+          );
+        });
+        bookButton.addEventListener("mouseleave", () => {
+          animate(
+            bookButton,
+            { scale: 1 },
+            { duration: 0.2, easing: [0.25, 0.46, 0.45, 0.94] },
+          );
+        });
+      }
+
+      // Scroll-triggered shine effect
+      inView(document.querySelector("#hero-content"), () => {
+        animate(
+          document.querySelector("#hero-content"),
+          {
+            background: [
+              "linear-gradient(90deg, transparent 0%, transparent 100%)",
+              "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
+            ],
+          },
+          { duration: 1.5, easing: "ease-out" },
+        );
+      });
+
+      // Car wash bubbles effect
+      const heroSection = document.querySelector(".hero");
+      if (heroSection) {
+        for (let i = 0; i < 5; i++) {
+          const bubble = document.createElement("div");
+          bubble.className =
+            "absolute rounded-full bg-primary/5 pointer-events-none";
+          const size = Math.random() * 20 + 10;
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${Math.random() * 100}%`;
+          bubble.style.top = `${Math.random() * 100}%`;
+          heroSection.appendChild(bubble);
+
+          animate(
+            bubble,
+            {
+              y: [0, -50, 0],
+              x: [0, Math.random() * 30 - 15, 0],
+              opacity: [0.3, 0.7, 0.3],
+              scale: [1, 1.2, 1],
+            },
+            {
+              duration: Math.random() * 3 + 4,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              easing: [0.45, 0.05, 0.55, 0.95],
+            },
+          );
+        }
+      }
+    });
+  </script>
+</Page>
