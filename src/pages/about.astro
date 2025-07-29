@@ -9,13 +9,16 @@ import Page from "../layouts/Page.astro";
   <main class="min-h-screen bg-base-100">
     <!-- Hero Section -->
     <section
-      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
+      class="hero text-primary-content py-20"
+      style="background-image: url('https://media.istockphoto.com/id/1473399381/photo/team-of-workers-cleaning-a-car-while-working-at-a-car-wash.jpg?s=1024x1024&w=is&k=20&c=726aFcA6ShGPNyaJDTCIwolHje7bKj-MfUeawxBMt1o='); background-size: cover; background-position: center;"
     >
-      <div class="hero-content text-center">
+      <div
+        class="hero-content text-center bg-black/10 backdrop-blur-sm rounded-2xl p-8"
+      >
         <div class="max-w-2xl">
           <h1 class="text-5xl font-bold">About CARWASH</h1>
           <p class="py-6 text-lg">
-            Your trusted partner in premium car care since 2010
+            Your premier mobile car wash service in Sacramento, CA
           </p>
         </div>
       </div>
@@ -30,15 +33,17 @@ import Page from "../layouts/Page.astro";
         </div>
         <div class="prose lg:prose-xl mx-auto">
           <p class="text-lg leading-relaxed">
-            Founded in 2010, CARWASH began as a small family business with a
-            simple mission: to provide the highest quality car cleaning services
-            in the community. What started as a single location has grown into a
-            trusted network of premium car care centers.
+            Founded in Sacramento, California, CARWASH began as a dedicated
+            two-person team with a simple mission: to bring top-tier car
+            cleaning services directly to you. We specialize in mobile car
+            washing, offering unparalleled convenience and quality right at your
+            doorstep.
           </p>
           <p class="text-lg leading-relaxed">
-            We believe that your car deserves the best care possible. That's why
-            we use only eco-friendly products, state-of-the-art equipment, and
-            employ trained professionals who share our passion for excellence.
+            Our commitment to excellence is reflected in our use of only the
+            best portable, eco-friendly products and state-of-the-art equipment.
+            This allows our skilled team to deliver a thorough and efficient
+            wash, ensuring your vehicle looks its best, wherever you are.
           </p>
         </div>
       </div>
@@ -54,7 +59,7 @@ import Page from "../layouts/Page.astro";
           <div class="divider"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100">
             <div class="card-body text-center">
               <div class="mx-auto mb-4">
                 <svg
@@ -76,17 +81,44 @@ import Page from "../layouts/Page.astro";
             </div>
           </div>
 
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100">
             <div class="card-body text-center">
               <div class="mx-auto mb-4">
                 <svg
-                  class="size-16 text-primary mx-auto"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                  height="80px"
+                  width="80px"
+                  version="1.1"
+                  id="_x32_"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 512 412"
+                  xml:space="preserve"
+                  fill="#000000"
+                  ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .st0 {
+                        fill: #ef4444;
+                      }
+                    </style>
+                    <g>
+                      <path
+                        class="st0"
+                        d="M324.708,174.596c-12.583-2.092-41.546-2.322-65.932,2.992c-1.562-1.032-3.128-2.099-4.672-3.048 c-4.714-2.887-9.337-5.328-13.929-7.168c-4.452-1.771-8.891-2.991-13.535-3.236v-0.02c-6.956-0.565-13.709-0.816-19.918-0.816 c-9.453,0.014-17.517,0.537-23.493,1.534h0.024c-0.826,0.126-1.732,0.203-2.716,0.203c-5.164,0.062-12.312-2.392-18.797-5.935 c-4.372-2.343-9.79-1.102-12.705,2.915L77.86,260.171c-2.424,3.34-2.511,7.866-0.227,11.311c1.806,2.706,3.316,5.515,4.313,8.326 c1.433,3.968,3.508,7.573,5.903,11.081c2.398,3.493,5.136,6.882,7.994,10.118l1.12,1.073c0,0,5.125,4.226,13.291,10.948 c-2.131,3.055-3.302,6.681-3.344,10.502c-0.052,5.035,1.855,9.805,5.384,13.41c3.584,3.661,8.375,5.676,13.497,5.676 c3.588,0,7.018-1.032,10.006-2.922c-1.997,3.012-3.106,6.52-3.148,10.209c-0.056,5.035,1.858,9.798,5.383,13.396 c3.577,3.668,8.372,5.683,13.497,5.683c4.026,0,7.837-1.311,11.052-3.654c-5.85,7.336-5.533,18.039,1.192,24.922 c3.578,3.654,8.368,5.669,13.486,5.669h0.004c4.965,0,9.658-1.917,13.228-5.411l3.49-3.466c-1.461,2.678-2.333,5.648-2.368,8.78 c-0.052,5.041,1.855,9.804,5.383,13.409c3.581,3.654,8.375,5.669,13.497,5.669c4.961,0,9.65-1.91,13.252-5.425l2.124-2.155 c1.063,0.837,2.033,1.59,2.824,2.204c0.648,0.488,1.2,0.907,1.705,1.27l0.75,0.53l1.063,0.656c3.992,2.189,7.81,3.138,10.846,3.807 c1.513,0.314,2.81,0.53,3.772,0.662l1.172,0.154l0.366,0.035l0.139,0.014l0.087,0.014l0.094,0.007l0.126,0.007 c0.115,0,0.059,0.014,0.665,0.028l0.715-0.028c6.65-0.488,12.946-2.776,18.114-6.722c2.056-1.576,3.856-3.48,5.467-5.564 c3.183,1.032,6.554,1.645,10.062,1.645c14.228-0.006,26.202-9.079,30.839-21.7c0.516-0.035,1.029-0.056,1.537-0.188 c1.806,0.328,3.637,0.565,5.533,0.565c14.118-0.014,26.066-8.911,30.78-21.366c0.032-0.028,0.063-0.041,0.094-0.063l1.108,0.105 c18.238,0,33.001-14.777,33.008-33.004c0.011-5.063-0.69-10.662-2.618-16.485c12.517-11.059,30.86-28.144,34.176-37.418 c1.597-4.463,10.575-15.166,13.183-18.814l-70.621-97.394C351.848,165.377,334.369,176.214,324.708,174.596z M366.923,330.384 c-0.01,7.287-5.906,13.186-13.194,13.2c-1.806,0-3.493-0.362-5.065-1.018c-0.157-0.07-0.321-0.084-0.478-0.133l-12.238-14.888 c-3.096-3.584-8.518-3.988-12.106-0.893c-3.591,3.096-3.988,8.522-0.889,12.113l11.837,14.427 c-0.757,6.562-6.272,11.701-13.044,11.708c-3.215-0.007-6.066-1.15-8.399-3.068l-11.746-14.324 c-3.1-3.584-8.522-3.981-12.109-0.885c-3.592,3.096-3.986,8.522-0.89,12.105l8.183,10.196c-0.014,0.634-0.076,1.269,0.035,1.904 c0.143,0.802,0.209,1.526,0.209,2.196c-0.01,7.294-5.909,13.186-13.193,13.2c-1.904,0-3.657-0.439-5.275-1.15l-14.316-15.048 c-3.455-3.25-8.887-3.082-12.137,0.376c-3.253,3.452-3.085,8.891,0.366,12.133l6.718,7.88c-0.673,1.444-1.569,2.748-2.932,3.807 c-1.747,1.339-4.149,2.259-6.882,2.566c-0.798-0.118-1.883-0.3-3.173-0.606c-1.6-0.362-3.288-0.955-4.163-1.416 c-0.303-0.222-1.077-0.794-2.196-1.674c-0.635-0.488-1.356-1.045-2.158-1.687c1.45-6.094-0.112-12.775-4.815-17.586 c-3.581-3.661-8.375-5.676-13.497-5.676c-2.88,0-5.641,0.711-8.18,1.946l-0.076-0.063l0.087-0.098 c3.602-3.528,5.617-8.242,5.672-13.29c0.052-5.042-1.862-9.805-5.39-13.403c-3.578-3.654-8.374-5.676-13.493-5.676 c-4.003,0-7.796,1.296-10.997,3.612c2.59-3.264,4.094-7.225,4.139-11.457c0.056-5.042-1.858-9.805-5.384-13.403 c-3.58-3.668-8.374-5.683-13.496-5.683c-4.961,0-9.651,1.911-13.221,5.411l-3.183,3.166c3.926-7.113,3.02-16.22-2.943-22.314 c-3.584-3.661-8.378-5.676-13.5-5.676c-4.961,0-9.651,1.91-13.228,5.411l-2.106,2.113c-1.496-1.235-2.964-2.441-4.261-3.508 c-4.874-4.003-8.232-6.778-9.581-7.894c-2.28-2.601-4.39-5.216-6.039-7.642c-1.771-2.566-3.026-4.944-3.591-6.555 c-0.83-2.329-1.82-4.518-2.897-6.596l62.57-86.279c6.186,2.587,12.953,4.532,20.258,4.582c1.945,0,3.936-0.14,5.954-0.474h0.025 c4.166-0.711,11.592-1.27,20.205-1.255c5.68-0.014,11.928,0.223,18.315,0.739l0.436,0.028c1.569,0.042,4.181,0.6,7.353,1.883 l0.718,0.328c-26.728,12.07-64.606,35.292-77.054,39.447c-14.215,4.735-15.404,23.695,16.579,27.244 c31.989,3.563,60.419-16.589,67.525-20.131c5.101-2.552,37.508,0.565,55.458,2.531c7.915,7.817,14.853,15.069,19.912,20.55 l39.423,48.198l0.174,0.196c5.052,5.85,7.793,10.598,9.348,14.671C366.446,322.874,366.913,326.388,366.923,330.384z"
+                      ></path>
+                      <path
+                        class="st0"
+                        d="M510.641,229.622L415.374,98.233c-2.305-3.187-6.747-3.884-9.927-1.583l-42.198,30.599 c-3.18,2.301-3.888,6.75-1.58,9.93l95.268,131.389c2.304,3.18,6.746,3.891,9.926,1.59l42.205-30.605 C512.242,237.243,512.953,232.801,510.641,229.622z M478.226,241.427c-5.293,3.835-12.705,2.65-16.548-2.643 c-3.839-5.292-2.656-12.698,2.643-16.54c5.296-3.842,12.702-2.657,16.544,2.628C484.704,230.172,483.522,237.585,478.226,241.427z"
+                      ></path>
+                      <path
+                        class="st0"
+                        d="M148.757,127.248l-42.206-30.599c-3.173-2.301-7.618-1.604-9.926,1.583L1.354,229.622 c-2.308,3.18-1.59,7.622,1.583,9.93l42.198,30.605c3.18,2.301,7.621,1.59,9.922-1.59l95.272-131.389 C152.637,133.998,151.929,129.549,148.757,127.248z M120.554,141.92c-3.839,5.293-11.248,6.478-16.544,2.636 c-5.3-3.835-6.481-11.255-2.64-16.54c3.838-5.3,11.248-6.485,16.544-2.642C123.217,129.215,124.389,136.62,120.554,141.92z"
+                      ></path>
+                    </g>
+                  </g></svg
                 >
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
               </div>
               <h3 class="card-title text-primary justify-center">Trust</h3>
               <p>
@@ -96,7 +128,7 @@ import Page from "../layouts/Page.astro";
             </div>
           </div>
 
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100">
             <div class="card-body text-center">
               <div class="mx-auto mb-4">
                 <svg
@@ -127,13 +159,37 @@ import Page from "../layouts/Page.astro";
         <div class="stats stats-vertical lg:stats-horizontal shadow w-full">
           <div class="stat">
             <div class="stat-figure text-primary">
-              <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+              <svg
+                fill="#000000"
+                height="50px"
+                width="50px"
+                version="1.1"
+                id="Icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 24 24"
+                enable-background="new 0 0 24 24"
+                xml:space="preserve"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M18,19h-1.67l-1.73-1.3l-1.2,1.6l2.27,1.7H18v2h6v-6h-6V19z M20,19h2v2h-2V19z"
+                  ></path>
+                  <path d="M18,11h-3v2h3v2h6V9h-6V11z M20,11h2v2h-2V11z"></path>
+                  <path
+                    d="M18,1v2h-2.33L13.4,4.7l1.2,1.6L16.33,5H18v2h6V1H18z M22,5h-2V3h2V5z"
+                  ></path>
+                  <path
+                    d="M14,12.5V12V8c0-2.28-3.01-4-7-4S0,5.72,0,8v4v0.5v4C0,18.8,3.52,20,7,20s7-1.2,7-3.5V12.5z M7,6c3.05,0,5,1.18,5,2 s-1.95,2-5,2S2,8.82,2,8S3.95,6,7,6z M2,10.85C3.25,11.57,5,12,7,12s3.75-0.43,5-1.15V12v0.5c0,0.39-1.72,1.5-5,1.5s-5-1.11-5-1.5 V12V10.85z M7,18c-3.28,0-5-1.11-5-1.5v-1.49C3.33,15.66,5.17,16,7,16s3.67-0.34,5-0.99v1.49C12,16.89,10.28,18,7,18z"
+                  ></path>
+                </g></svg
+              >
             </div>
             <div class="stat-title">Cars Washed</div>
             <div class="stat-value text-primary">50K+</div>
-            <div class="stat-desc">Since 2010</div>
+            <div class="stat-desc">Since our founding</div>
           </div>
 
           <div class="stat">
@@ -155,17 +211,38 @@ import Page from "../layouts/Page.astro";
               <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fill-rule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L11 10.586V6z"
                   clip-rule="evenodd"></path>
               </svg>
             </div>
-            <div class="stat-title">Locations</div>
-            <div class="stat-value text-accent">3</div>
-            <div class="stat-desc">Across the city</div>
+            <div class="stat-title">Years of Experience</div>
+            <div class="stat-value text-accent">10+</div>
+            <div class="stat-desc">Serving Sacramento</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Map Section -->
+    <section class="py-16 lg:px-8 bg-base-200">
+      <div class="container mx-auto max-w-4xl text-center">
+        <div class="flex flex-col items-center justify-center mb-4">
+          <h2 class="text-4xl font-bold text-primary">Our Service Area</h2>
+          <span class="text-sm text-gray-500">
+            We serve the entire Sacramento CA. USA area.
+          </span>
+        </div>
+        <div class="divider"></div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d199698.29495036788!2d-121.5726577!3d38.5502272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2spe!4v1753810789139!5m2!1ses!2spe"
+          width="100%"
+          height="450"
+          style="border:0; border-radius: 20px; overflow: hidden;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
   </main>
 </Page>
-
