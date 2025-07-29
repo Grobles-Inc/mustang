@@ -1,0 +1,67 @@
+---
+const services = [
+  {
+    title: "Exterior Hand Wash",
+    image: "https://images.unsplash.com/photo-1669833886433-0d54434a58ad?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Clean and protect your car's exterior with a gentle hand wash and wax.",
+  },
+  {
+    title: "Automatic Tunnel Wash",
+    image: "https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Let our automatic tunnel wash clean your car with precision and speed.",
+  },
+  {
+    title: "Seat and Carpet Shampooing",
+    image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Clean and protect your car's interior with a gentle shampooing.",
+  },
+  {
+    title: "Interior Vacuuming",
+    image: "https://images.unsplash.com/photo-1608259243654-70c070e0f6ed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Clean and protect your car's interior with a gentle vacuuming.",
+  },
+]
+
+---
+<section class=" bg-gray-50">
+  <div class="">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+      
+      {services.map((service) => (
+        <div class="group relative h-[541px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+          
+          <div class="absolute inset-0">
+            <img 
+              src={service.image} 
+              alt={service.title}
+              class="w-full h-full object-cover"
+            />
+            <!-- Overlay oscuro -->
+            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300"></div>
+          </div>
+
+          <!-- Contenido -->
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <h3 class="text-white text-3xl font-bold mb-4 leading-tight">
+              {service.title}
+            </h3>
+            
+            <button class="inline-flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 group/btn">
+              <span class="text-xl">Book now</span>
+              <svg 
+                class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -10,7 +11,7 @@
   --color-base-200: oklch(97% 0 0);
   --color-base-300: oklch(92% 0 0);
   --color-base-content: oklch(20% 0 0);
-  --color-primary: oklch(65% 0.25 25);
+  --color-primary: oklch(65% 0.25 265);
   --color-primary-content: oklch(98% 0.003 247.858);
   --color-secondary: oklch(67.23% 0.116 71.78);
   --color-secondary-content: oklch(98% 0.003 247.858);
@@ -34,4 +35,8 @@
   --border: 1px;
   --depth: 1;
   --noise: 0;
+}
+
+body {
+  font-family: "Afacad", sans-serif;
 }
