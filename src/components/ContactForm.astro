@@ -1,6 +1,7 @@
 ---
 // Componente de formulario de contacto
 import { handleFormSubmit } from "../utils/whatsapp";
+const currentLocale = Astro.currentLocale || "en";
 ---
 
 <section class="py-20">
@@ -12,20 +13,24 @@ import { handleFormSubmit } from "../utils/whatsapp";
       <div class="grid md:grid-cols-2 gap-0">
         <!-- Sección izquierda - Información -->
         <div class="bg-gray-50 p-8 md:p-12">
-          <h2 class="text-4xl font-bold text-gray-800 mb-6">Got Questions?</h2>
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">
+            {currentLocale === "en" ? "Got Questions?" : "¿Tienes preguntas?"}
+          </h2>
 
           <div class="space-y-4 text-gray-700">
             <p class="text-xl leading-relaxed">
-              Enquire today about our services, or advice on how to best care
-              for your car. Use the form to get in touch or call or email us
-              directly. Check out our frequently asked questions for more
-              information.
+              {
+                currentLocale === "en"
+                  ? "Enquire today about our services, or advice on how to best care for your car. Use the form to get in touch or call or email us directly. Check out our frequently asked questions for more information."
+                  : "Consulta hoy sobre nuestros servicios, o asesoría sobre cómo cuidar mejor tu automóvil. Usa el formulario para contactarnos o llama o envíanos un correo electrónico. Revisa nuestras preguntas frecuentes para obtener más información."
+              }
             </p>
             <p class="text-xl leading-relaxed">
-              Enquire today about our services, or advice on how to best care
-              for your car. Use the form to get in touch or call or email us
-              directly. Check out our frequently asked questions for more
-              information.
+              {
+                currentLocale === "en"
+                  ? "Enquire today about our services, or advice on how to best care for your car. Use the form to get in touch or call or email us directly. Check out our frequently asked questions for more information."
+                  : "Consulta hoy sobre nuestros servicios, o asesoría sobre cómo cuidar mejor tu automóvil. Usa el formulario para contactarnos o llama o envíanos un correo electrónico. Revisa nuestras preguntas frecuentes para obtener más información."
+              }
             </p>
           </div>
 
@@ -44,7 +49,13 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
                   ></path>
                 </svg>
-                <span class="text-gray-800 text-lg">contact@contact.com</span>
+                <span class="text-gray-800 text-lg"
+                  >{
+                    currentLocale === "en"
+                      ? "contact@contact.com"
+                      : "contact@contact.com"
+                  }</span
+                >
               </div>
               <div class="flex items-center space-x-3">
                 <svg
@@ -56,7 +67,13 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
                   ></path>
                 </svg>
-                <span class="text-gray-800 text-lg">(01) 2568 1575 65</span>
+                <span class="text-gray-800 text-lg"
+                  >{
+                    currentLocale === "en"
+                      ? "(01) 2568 1575 65"
+                      : "(01) 2568 1575 65"
+                  }</span
+                >
               </div>
             </div>
           </div>
@@ -65,7 +82,11 @@ import { handleFormSubmit } from "../utils/whatsapp";
         <!-- Sección derecha - Formulario -->
         <div class="p-8 md:p-12">
           <h3 class="text-xl font-bold text-gray-800 mb-8">
-            CONSULT A SERVICE
+            {
+              currentLocale === "en"
+                ? "CONSULT A SERVICE"
+                : "CONSULTAR UN SERVICIO"
+            }
           </h3>
 
           <form class="space-y-6" id="contactForm">
@@ -73,59 +94,72 @@ import { handleFormSubmit } from "../utils/whatsapp";
             <div class="space-y-4">
               <div>
                 <label class="block text-xl font-medium text-gray-700 mb-2">
-                  Name <span class="text-blue-500">•</span>
+                  {currentLocale === "en" ? "Name" : "Nombre"}
+                  <span class="text-blue-500">•</span>
                 </label>
                 <input
                   type="text"
                   name="nombre"
                   required
                   class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder="Your full name"
+                  placeholder={currentLocale === "en"
+                    ? "Your full name"
+                    : "Tu nombre completo"}
                 />
               </div>
 
               <div>
                 <label class="block text-xl font-medium text-gray-700 mb-2">
-                  Phone <span class="text-blue-500">•</span>
+                  {currentLocale === "en" ? "Phone" : "Teléfono"}
+                  <span class="text-blue-500">•</span>
                 </label>
                 <input
                   type="tel"
                   name="numero"
                   required
                   class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder="Your phone number"
+                  placeholder={currentLocale === "en"
+                    ? "Your phone number"
+                    : "Tu número de teléfono"}
                 />
               </div>
 
               <div>
                 <label class="block text-xl font-medium text-gray-700 mb-2">
-                  Car <span class="text-blue-500">•</span>
+                  {currentLocale === "en" ? "Car" : "Coche"}
+                  <span class="text-blue-500">•</span>
                 </label>
                 <input
                   type="text"
                   name="carro"
                   required
                   class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder="Car brand"
+                  placeholder={currentLocale === "en"
+                    ? "Car brand"
+                    : "Marca del coche"}
                 />
               </div>
 
               <div>
                 <label class="block text-xl font-medium text-gray-700 mb-2">
-                  Car Model <span class="text-blue-500">•</span>
+                  {currentLocale === "en" ? "Car Model" : "Modelo del coche"}
+                  <span class="text-blue-500">•</span>
                 </label>
                 <input
                   type="text"
                   name="modelo"
                   required
                   class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder="Car model"
+                  placeholder={currentLocale === "en"
+                    ? "Car model"
+                    : "Modelo del coche"}
                 />
               </div>
 
               <div>
                 <label class="block text-xl font-medium text-gray-700 mb-2">
-                  Service Day <span class="text-blue-500">•</span>
+                  {currentLocale === "en" ? "Service Day" : "Día de servicio"}
+                  <span class="text-blue-500">•</span>
                 </label>
                 <input
                   type="date"
@@ -139,7 +173,11 @@ import { handleFormSubmit } from "../utils/whatsapp";
             <!-- Sección de servicios -->
             <div class="mt-8">
               <h4 class="text-xl font-bold text-gray-800 mb-4">
-                SERVICE(S) CONSULT
+                {
+                  currentLocale === "en"
+                    ? "SERVICE(S) CONSULT"
+                    : "CONSULTAR SERVICIO(S)"
+                }
               </h4>
               <div class="space-y-3">
                 <label class="flex items-center space-x-3 cursor-pointer">
@@ -150,7 +188,11 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
                   <span class="text-xl text-gray-700"
-                    >Manual Exterior Wash</span
+                    >{
+                      currentLocale === "en"
+                        ? "Manual Exterior Wash"
+                        : "Lavado manual exterior"
+                    }</span
                   >
                 </label>
 
@@ -162,7 +204,11 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
                   <span class="text-xl text-gray-700"
-                    >Automatic Tunnel Wash</span
+                    >{
+                      currentLocale === "en"
+                        ? "Automatic Tunnel Wash"
+                        : "Lavado automático en túnel"
+                    }</span
                   >
                 </label>
 
@@ -174,7 +220,11 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
                   <span class="text-xl text-gray-700"
-                    >Shampoo of Seats and Carpets</span
+                    >{
+                      currentLocale === "en"
+                        ? "Shampoo of Seats and Carpets"
+                        : "Shampoo de asientos y tapizados"
+                    }</span
                   >
                 </label>
 
@@ -185,7 +235,12 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     value="window-cleaning"
                     class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
-                  <span class="text-xl text-gray-700">Window Cleaning</span
+                  <span class="text-xl text-gray-700"
+                    >{
+                      currentLocale === "en"
+                        ? "Window Cleaning"
+                        : "Limpieza de ventanas"
+                    }</span
                   >
                 </label>
 
@@ -196,7 +251,13 @@ import { handleFormSubmit } from "../utils/whatsapp";
                     value="waxing-polishing"
                     class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
-                  <span class="text-xl text-gray-700">Waxing and Polishing</span>
+                  <span class="text-xl text-gray-700">
+                    {
+                      currentLocale === "en"
+                        ? "Waxing and Polishing"
+                        : "Cera y pulido"
+                    }</span
+                  >
                 </label>
               </div>
             </div>
@@ -206,7 +267,7 @@ import { handleFormSubmit } from "../utils/whatsapp";
               type="submit"
               class="w-full mt-8 bg-white border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-white transition duration-300 flex items-center justify-center space-x-2 text-2xl cursor-pointer group"
             >
-              <span>Send</span>
+              <span>{currentLocale === "en" ? "Send" : "Enviar"}</span>
               <svg
                 class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-2"
                 fill="none"

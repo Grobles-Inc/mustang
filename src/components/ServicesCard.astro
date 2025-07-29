@@ -1,24 +1,25 @@
 ---
+const currentLocale = Astro.currentLocale || "en";
 const services = [
   {
-    title: "Exterior Hand Wash",
+    title: currentLocale === "en" ? "Exterior Hand Wash" : "Lavado manual exterior",
     image: "https://images.unsplash.com/photo-1669833886433-0d54434a58ad?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Clean and protect your car's exterior with a gentle hand wash and wax.",
+    description: currentLocale === "en" ? "Clean and protect your car's exterior with a gentle hand wash and wax." : "Limpia y protege el exterior de tu coche con un lavado manual y cera.",
   },
   {
-    title: "Automatic Tunnel Wash",
+    title: currentLocale === "en" ? "Automatic Tunnel Wash" : "Lavado automático en túnel",
     image: "https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Let our automatic tunnel wash clean your car with precision and speed.",
+    description: currentLocale === "en" ? "Let our automatic tunnel wash clean your car with precision and speed." : "Deja que nuestro lavado automático en túnel limpie tu coche con precisión y rapidez.",
   },
   {
-    title: "Seat and Carpet Shampooing",
+    title: currentLocale === "en" ? "Seat and Carpet Shampooing" : "Shampoo de asientos y tapizados",
     image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Clean and protect your car's interior with a gentle shampooing.",
+    description: currentLocale === "en" ? "Clean and protect your car's interior with a gentle shampooing." : "Limpia y protege el interior de tu coche con un shampoo suave.",
   },
   {
-    title: "Interior Vacuuming",
+        title: currentLocale === "en" ? "Interior Vacuuming" : "Vacío de interior",
     image: "https://images.unsplash.com/photo-1608259243654-70c070e0f6ed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Clean and protect your car's interior with a gentle vacuuming.",
+    description: currentLocale === "en" ? "Clean and protect your car's interior with a gentle vacuuming." : "Limpia y protege el interior de tu coche con un aspirado suave.",
   },
 ]
 
@@ -53,7 +54,7 @@ const services = [
               data-aos="fade-up"
               data-aos-delay="100"
               >
-                <span class="text-xl">Book now</span>
+                <span class="text-xl">{currentLocale === "en" ? "Book now" : "Reservar ahora"}</span>
                 <svg 
                   class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" 
                   fill="none" 

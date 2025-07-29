@@ -1,5 +1,5 @@
 ---
-
+const currentLocale = Astro.currentLocale || "en";
 ---
 
 <section
@@ -13,7 +13,7 @@
     />
   </div>
   <div class="absolute inset-0 bg-black/40"></div>
-  
+
   <div class="relative z-10 mx-auto w-full">
     <div class="grid lg:grid-cols-2 gap-8 items-center">
       <div class="order-2 lg:order-1" data-aos="fade-up">
@@ -31,47 +31,51 @@
           class="text-4xl lg:text-[80px] font-bold text-white mb-6 leading-tight"
           data-aos="fade-up"
         >
-          <span class="block">SHINE LIKE NEW,</span>
-          <span
-            class="block bg-gradient-to-r text-primary bg-clip-text"
+          <span class="block"
+            >{
+              currentLocale === "en" ? "SHINE LIKE NEW," : "BRILLA COMO NUEVO,"
+            }</span
           >
-            EVERY TIME.
+          <span class="block bg-gradient-to-r text-primary bg-clip-text">
+            {currentLocale === "en" ? "EVERY TIME." : "TODA VEZ."}
           </span>
         </h1>
 
-        <p 
+        <p
           class="text-lg lg:text-2xl text-white/90 mb-8 max-w-lg lg:max-w-none"
-          data-aos="fade-up" 
+          data-aos="fade-up"
         >
-          At CarWash, we bring out your car's <br> shine with eco-friendly care and <br>
-          premium service. Fast, friendly, flawless.
+          {
+            currentLocale === "en"
+              ? "At CarWash, we bring out your car's shine with eco-friendly care and premium service. Fast, friendly, flawless."
+              : "En CarWash, traemos el brillo de tu coche con cuidado ecológico y servicio premium. Rápido, amigable, perfecto."
+          }
         </p>
 
-        <div 
+        <div
           class="flex justify-center lg:justify-start"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-        <a href="/contact">
-          <button
-            class="bg-primary hover:bg-white rounded-xl p-4 text-white hover:text-blue-500 transition duration-300 cursor-pointer text-2xl flex items-center gap-2 transform group"
-          >
-            Reservar ahora
-            <svg
-              class="w-5 h-5 transition-transform duration-500 group-hover:rotate-[360deg]"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <a href="/contact">
+            <button
+              class="bg-primary hover:bg-white rounded-xl p-4 text-white hover:text-blue-500 transition duration-300 cursor-pointer text-2xl flex items-center gap-2 transform group"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              ></path>
-            </svg>
-          </button>
-        </a>
+              {currentLocale === "en" ? "Reserve now" : "Reservar ahora"}
+              <svg
+                class="w-5 h-5 transition-transform duration-500 group-hover:rotate-[360deg]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </a>
         </div>
       </div>
     </div>

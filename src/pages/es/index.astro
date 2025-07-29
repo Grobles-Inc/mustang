@@ -1,123 +1,78 @@
 ---
 import Page from "@layouts/Page.astro";
+import HeroSection from "@components/HeroSection.astro";
+import ServicesCard from "@components/ServicesCard.astro";
+import ContactForm from "@components/ContactForm.astro";
 ---
 
 <Page
-  title="Carwash - Servicios Profesionales de Lavado de Autos"
-  description="Carwash es un servicio profesional de lavado de autos que ofrece una gama de servicios para mantener tu auto limpio y en su mejor estado."
+	title="Carwash - Servicios Profesionales de Limpieza de Coches"
+	description="Carwash es un servicio profesional de limpieza de coches que ofrece una gama de servicios para mantener su coche limpio y en su mejor estado."
 >
-  <div class="hero min-h-screen bg-base-100 relative overflow-hidden">
-    <div class="hero-content max-w-7xl mx-auto px-4 lg:px-8 w-full">
-      <div
-        class="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center w-full"
-      >
-        <!-- Car Image - First on mobile, second on desktop -->
-        <div
-          class="order-1 lg:order-2 relative lg:h-[600px] h-[400px] w-full flex items-center justify-center"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          <!-- Car image -->
-          <div
-            class="relative z-10 w-full h-full flex items-center justify-center p-8"
-          >
-            <img
-              src="https://www.pngmart.com/files/10/Red-Ford-Mustang-PNG-Picture.png"
-              alt="Auto deportivo rojo - Servicios profesionales de lavado de autos"
-              class="w-full h-full object-contain"
-              loading="lazy"
-            />
-          </div>
-        </div>
+	<HeroSection />
+	<ServicesCard />
 
-        <!-- Content - Second on mobile, first on desktop -->
-        <div class="order-2 lg:order-1 space-y-8 text-center lg:text-left">
-          <h1
-            class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight"
-            data-aos="fade-up"
-            data-aos-duration="800"
-          >
-            Mantén Tu
-            <span class="text-primary">Auto Limpio</span>
-            Siempre
-          </h1>
-          <p
-            class="text-lg text-base-content/70 max-w-lg leading-relaxed mx-auto lg:mx-0"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            Fillco car wash es una marca que va a cambiar literalmente la forma
-            en que la gente piensa sobre la limpieza de autos.
-          </p>
-          <div
-            class="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="400"
-          >
-            <a href="/es/book" class="btn btn-primary btn-lg gap-2">
-              Reservar Lavado
-              <svg
-                class="size-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </a>
-          </div>
-          <div
-            class="flex gap-6 text-sm justify-center lg:justify-start"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="600"
-          >
-            <div class="flex items-center gap-2">
-              <svg
-                class="size-5 text-primary"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-                ></path>
-              </svg>
-              <div>
-                <div class="font-medium">LLÁMANOS AHORA AL</div>
-                <div class="text-primary font-bold">+18076320103</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg
-                class="size-5 text-primary"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 100-4 2 2 0 000 4z"
-                  clip-rule="evenodd"></path>
-              </svg>
-              <div>
-                <div class="font-medium">NUESTRA UBICACIÓN</div>
-                <div class="text-primary font-bold">Shilaganj, Sylhet</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="flex flex-col justify-center items-center mt-10 gap-4">
+		<img src="/logoCarWash.jpg" alt="logoCarWash" class="h-20 w-auto" />
+		<div class="w-px h-24 bg-black" data-aos="fade-up"></div>
+		<p class="text-center max-w-md text-xl" data-aos="fade-up">
+			Sabemos que tu coche es donde se crean recuerdos, donde la música suena a
+			todo volumen, y donde tu día comienza. Es parte de tu historia, y estamos
+			aquí para ayudarte a mantenerlo luciendo impecable.
+		</p>
+		<div
+			class="w-full flex flex-wrap justify-center gap-6 px-4 py-52 relative bg-center bg-cover mt-10 bg-scroll md:bg-fixed"
+			style={{
+				backgroundImage:
+					"url('https://images.unsplash.com/photo-1560037962-a00331b63f72?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+			}}
+		>
+		</div>
+	</div>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+		<img
+			src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			alt="Men Cleaning Car"
+			class="w-full h-64 md:h-full object-cover rounded"
+		/>
+		<div class="p-6 md:p-10 flex flex-col justify-center">
+			<h2 class="text-2xl md:text-4xl font-bold" data-aos="fade-up">
+				El Servicio Premium de Lavado y Detallado de Coches de América
+			</h2>
+			<p
+				class="text-lg md:text-xl pt-4 md:pt-5"
+				data-aos="fade-up"
+				data-aos-delay="200"
+			>
+				Cuidando Coches con Precisión y Pasión por Más de 20 Años En Mustang Car
+				Wash Móvil, no solo lavamos coches, restauramos el orgullo de tu
+				vehículo. Con dos décadas de experiencia, nuestro equipo experto combina
+				equipos de vanguardia, productos de alta calidad y técnicas probadas
+				para sacar lo mejor de cada vehículo. <br />
+				<br />
+				Desde lavados rápidos exprés hasta detallados completos de interior y exterior,
+				ofrecemos resultados superiores con una atención al detalle inigualable.
+				Cada servicio se realiza con cuidado, consistencia y un compromiso con la
+				excelencia.
+				<br /><br />
+				Nuestra misión es superar tus expectativas cada vez que nos visites. Utilizamos
+				soluciones de limpieza ecológicas para proteger tanto tu coche como el medio
+				ambiente.
+			</p>
+		</div>
+	</div>
 
-    <script is:inline>
-      import AOS from "aos";
-      import "aos/dist/aos.css";
-      AOS.init();
-    </script>
-  </div>
+	<!-- Sección del formulario de contacto con imagen de fondo -->
+	<section
+		class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+		style="background-image: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+	>
+		<!-- Overlay con blur -->
+		<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+		<!-- Contenido del formulario -->
+		<div class="relative z-10">
+			<ContactForm />
+		</div>
+	</section>
 </Page>

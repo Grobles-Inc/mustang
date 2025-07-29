@@ -16,13 +16,6 @@ const currentLocale = Astro.currentLocale || "en";
     <ul class="menu w-full space-y-2">
       <li>
         <a
-          href={currentLocale === "en" ? "/locations" : "/es/locations"}
-          class="btn btn-ghost justify-start"
-          >{currentLocale === "en" ? "Locations" : "Ubicaciones"}</a
-        >
-      </li>
-      <li>
-        <a
           href={currentLocale === "en" ? "/about" : "/es/about"}
           class="btn btn-ghost justify-start"
           >{currentLocale === "en" ? "About Us" : "Nosotros"}</a

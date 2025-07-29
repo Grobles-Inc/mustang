@@ -1,5 +1,5 @@
 ---
-
+const currentLocale = Astro.currentLocale || "en";
 ---
 
 <footer class="footer bg-base-200 text-base-content p-10">
@@ -13,9 +13,11 @@
         <img src="/logoCarWash.jpg" alt="logo" class="w-full h-20" />
       </div>
       <p class="text-lg leading-relaxed">
-        We know that your car is where dreams are made, where the music blasts,
-        and where your day begins. It's part of your story, and we're here to
-        help you keep it looking its best.
+        {
+          currentLocale === "en"
+            ? "Mobile car wash service at your doorstep. We bring convenience, quality, and shine to your vehicle."
+            : "Lavado de autos móvil a domicilio. Llevamos conveniencia, calidad y brillo a tu vehículo."
+        }
       </p>
     </aside>
 
@@ -25,50 +27,162 @@
         SERVICES
       </h6>
       <ul class="space-y-2">
-        <li><a class="link link-hover text-lg">Exterior Hand Wash</a></li>
         <li>
-          <a class="link link-hover text-lg">Spot and Carpet Shampooing</a>
+          <a class="link link-hover text-lg flex items-center gap-2">
+            <svg
+              class="inline-block w-5 h-5 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+            {
+              currentLocale === "en"
+                ? "Exterior Hand Wash"
+                : "Lavado manual exterior"
+            }
+          </a>
         </li>
-        <li><a class="link link-hover text-lg">Automatic Tunnel Wash</a></li>
-        <li><a class="link link-hover text-lg">Waxing & Polishing</a></li>
         <li>
-          <a class="link link-hover text-lg">Seat and Carpet Shampooing</a>
+          <a class="link link-hover text-lg flex items-center gap-2">
+            <svg
+              class="inline-block w-5 h-5 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+            {
+              currentLocale === "en"
+                ? "Spot and Carpet Shampooing"
+                : "Shampoo de tapizados y alfombras"
+            }
+          </a>
         </li>
-        <li><a class="link link-hover text-lg">Window Cleaning</a></li>
+        <li>
+          <a class="link link-hover text-lg flex items-center gap-2">
+            <svg
+              class="inline-block w-5 h-5 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+            {
+              currentLocale === "en"
+                ? "Automatic Tunnel Wash"
+                : "Lavado automático en túnel"
+            }
+          </a>
+        </li>
+        <li>
+          <a class="link link-hover text-lg flex items-center gap-2">
+            <svg
+              class="inline-block w-5 h-5 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+            {currentLocale === "en" ? "Waxing & Polishing" : "Cera y pulido"}
+          </a>
+        </li>
+        <li>
+          <a class="link link-hover text-lg flex items-center gap-2">
+            <svg
+              class="inline-block w-5 h-5 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+            {
+              currentLocale === "en"
+                ? "Seat and Carpet Shampooing"
+                : "Shampoo de asientos y tapizados"
+            }
+          </a>
+        </li>
+        <li>
+          <a class="link link-hover text-lg flex items-center gap-2">
+            <svg
+              class="inline-block w-5 h-5 text-green-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+            {
+              currentLocale === "en"
+                ? "Window Cleaning"
+                : "Limpieza de ventanas"
+            }
+          </a>
+        </li>
       </ul>
     </nav>
 
     <!-- Menu -->
     <nav class="flex flex-col">
-      <h6 class="footer-title text-xl text-base-content font-semibold mb-4">MENU</h6>
+      <h6 class="footer-title text-xl text-base-content font-semibold mb-4">
+        MENU
+      </h6>
       <ul class="space-y-2">
-        <li><a class="link link-hover text-lg">LOCATIONS</a></li>
-        <li><a class="link link-hover text-lg">ABOUT US</a></li>
-        <li><a class="link link-hover text-lg">CONTACT</a></li>
-        <li><a class="link link-hover text-lg">SERVICES</a></li>
+        <li>
+          <a class="link link-hover text-lg"
+            >{currentLocale === "en" ? "ABOUT US" : "SOBRE NOSOTROS"}</a
+          >
+        </li>
+        <li>
+          <a class="link link-hover text-lg"
+            >{currentLocale === "en" ? "CONTACT" : "CONTACTO"}</a
+          >
+        </li>
+        <li>
+          <a class="link link-hover text-lg"
+            >{currentLocale === "en" ? "SERVICES" : "SERVICIOS"}</a
+          >
+        </li>
       </ul>
     </nav>
 
     <!-- Contact -->
     <nav class="flex flex-col">
-      <h6 class="footer-title text-xl text-base-content font-semibold mb-4">CONTACT</h6>
+      <h6 class="footer-title text-xl text-base-content font-semibold mb-4">
+        {currentLocale === "en" ? "CONTACT" : "CONTACTO"}
+      </h6>
       <div class="space-y-3">
         <div>
-          <p class="text-lg font-medium">CALL US</p>
-          <p class="text-lg">03 345 7433</p>
-        </div>
-        <div>
-          <p class="text-lg font-medium">ADDRESS</p>
-          <p class="text-lg">AV JOSEPH JOSPIN 123</p>
-        </div>
-        <div>
-          <p class="text-sm font-medium">EMAIL</p>
-          <p class="text-sm">contact@carwash.com</p>
+          <p class="text-lg font-medium">
+            {currentLocale === "en" ? "CALL US" : "LLAMANOS"}
+          </p>
+          <p class="text-lg">+1 (279) 268-6610</p>
         </div>
 
         <!-- Social Icons -->
         <div class="flex gap-3 mt-4">
-          <a class="btn btn-circle btn-ghost btn-sm">
+          <a
+            class="btn btn-circle btn-ghost btn-sm"
+            href="https://wa.me/12792686610?text=Hello"
+          >
             <svg
               class="size-6"
               viewBox="0 0 24 24"
@@ -89,42 +203,7 @@
               </g></svg
             >
           </a>
-          <a class="btn btn-circle btn-ghost btn-sm">
-            <svg
-              class="size-6"
-              viewBox="0 -3.5 32 32"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-                <title>mail</title>
-                <desc>Created with Sketch Beta.</desc>
-                <defs> </defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="Icon-Set-Filled"
-                    transform="translate(-414.000000, -261.000000)"
-                    fill="#000000"
-                  >
-                    <path
-                      d="M430,275.916 L426.684,273.167 L415.115,285.01 L444.591,285.01 L433.235,273.147 L430,275.916 L430,275.916 Z M434.89,271.89 L445.892,283.329 C445.955,283.107 446,282.877 446,282.634 L446,262.862 L434.89,271.89 L434.89,271.89 Z M414,262.816 L414,282.634 C414,282.877 414.045,283.107 414.108,283.329 L425.147,271.927 L414,262.816 L414,262.816 Z M445,261 L415,261 L430,273.019 L445,261 L445,261 Z"
-                      id="mail"
-                    >
-                    </path>
-                  </g>
-                </g>
-              </g></svg
-            >
-          </a>
+
           <a class="btn btn-circle btn-ghost btn-sm">
             <svg
               class="size-6"
@@ -171,11 +250,22 @@
       </div>
     </nav>
   </div>
-  <div class="w-[60%] mx-auto h-px bg-black"></div>
+  <div class="w-full mx-auto h-px bg-black"></div>
   <div class="text-black max-w-6xl mx-auto">
     <p class="text-center text-lg">
-      &copy; 2025 CarWash. All rights reserved.
-      <span>Desarrollado por <a href="https://groblesolutions.netlify.app/" class="text-primary underline">Grobles Solutions.</a></span>
+      {
+        currentLocale === "en"
+          ? "Copyright © 2025 Mustang CarWash Mobile. All rights reserved."
+          : "Copyright © 2025 Mustang CarWash Mobile. Todos los derechos reservados."
+      }
+      <br />
+      <span
+        >{currentLocale === "en" ? "Developed by" : "Desarrollado por"}
+        <a
+          href="https://groblesolutions.netlify.app/"
+          class="text-primary underline">Grobles Solutions.</a
+        ></span
+      >
     </p>
   </div>
 </footer>

@@ -1,4 +1,5 @@
 ---
+import ContactForm from "@components/ContactForm.astro";
 import Page from "../layouts/Page.astro";
 ---
 
@@ -8,24 +9,18 @@ import Page from "../layouts/Page.astro";
 >
   <main class="min-h-screen bg-base-100">
     <!-- Hero Section -->
-    <section
-      class="hero text-primary-content py-20"
-      style="background-image: url('https://media.istockphoto.com/id/1473399381/photo/team-of-workers-cleaning-a-car-while-working-at-a-car-wash.jpg?s=1024x1024&w=is&k=20&c=726aFcA6ShGPNyaJDTCIwolHje7bKj-MfUeawxBMt1o='); background-size: cover; background-position: center;"
-    >
-      <div
-        class="hero-content text-center bg-black/10 backdrop-blur-sm rounded-2xl p-8"
-      >
-        <div class="max-w-2xl">
-          <h1 class="text-5xl font-bold">About CARWASH</h1>
-          <p class="py-6 text-lg">
-            Your premier mobile car wash service in Sacramento, CA
-          </p>
-        </div>
+
+    <div class="hero-content mx-auto text-center" data-aos="fade-up">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl font-black uppercase">About US: CARWASH</h1>
+        <p class="py-6 text-lg">
+          Your premier mobile car wash service in Sacramento, CA
+        </p>
       </div>
-    </section>
+    </div>
 
     <!-- Our Story Section -->
-    <section class="py-16 px-4 lg:px-8">
+    <section class="py-16 px-4 lg:px-8" data-aos="fade-up">
       <div class="container mx-auto max-w-4xl">
         <div class="text-center mb-12">
           <h2 class="text-4xl font-bold text-primary mb-4">Our Story</h2>
@@ -50,16 +45,14 @@ import Page from "../layouts/Page.astro";
     </section>
 
     <!-- Mission & Values -->
-    <section class="py-16 bg-base-200">
+    <section class="py-16 bg-base-200" data-aos="fade-up">
       <div class="container mx-auto px-4 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-primary mb-4">
-            Our Mission & Values
-          </h2>
+          <h2 class="text-4xl font-bold text-primary mb-4">Our Values</h2>
           <div class="divider"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="card bg-base-100">
+          <div class="card bg-base-100" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body text-center">
               <div class="mx-auto mb-4">
                 <svg
@@ -73,7 +66,9 @@ import Page from "../layouts/Page.astro";
                     clip-rule="evenodd"></path>
                 </svg>
               </div>
-              <h3 class="card-title text-primary justify-center">Quality</h3>
+              <h3 class="card-title text-3xl text-primary justify-center">
+                Quality
+              </h3>
               <p>
                 We never compromise on quality. Every service is performed to
                 the highest standards.
@@ -81,7 +76,7 @@ import Page from "../layouts/Page.astro";
             </div>
           </div>
 
-          <div class="card bg-base-100">
+          <div class="card bg-base-100" data-aos="fade-up" data-aos-delay="200">
             <div class="card-body text-center">
               <div class="mx-auto mb-4">
                 <svg
@@ -100,7 +95,7 @@ import Page from "../layouts/Page.astro";
                     stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
                     <style type="text/css">
                       .st0 {
-                        fill: #ef4444;
+                        fill: #448eef;
                       }
                     </style>
                     <g>
@@ -120,7 +115,9 @@ import Page from "../layouts/Page.astro";
                   </g></svg
                 >
               </div>
-              <h3 class="card-title text-primary justify-center">Trust</h3>
+              <h3 class="card-title text-3xl text-primary justify-center">
+                Trust
+              </h3>
               <p>
                 Building lasting relationships through honest service and
                 transparent pricing.
@@ -128,7 +125,7 @@ import Page from "../layouts/Page.astro";
             </div>
           </div>
 
-          <div class="card bg-base-100">
+          <div class="card bg-base-100" data-aos="fade-up" data-aos-delay="300">
             <div class="card-body text-center">
               <div class="mx-auto mb-4">
                 <svg
@@ -142,7 +139,9 @@ import Page from "../layouts/Page.astro";
                     clip-rule="evenodd"></path>
                 </svg>
               </div>
-              <h3 class="card-title text-primary justify-center">Care</h3>
+              <h3 class="card-title text-3xl text-primary justify-center">
+                Care
+              </h3>
               <p>
                 We treat every vehicle with the same care and attention we'd
                 give our own.
@@ -154,10 +153,10 @@ import Page from "../layouts/Page.astro";
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16">
+    <section class="py-16" data-aos="fade-up">
       <div class="container mx-auto px-4 lg:px-8">
         <div class="stats stats-vertical lg:stats-horizontal shadow w-full">
-          <div class="stat">
+          <div class="stat" data-aos="fade-up" data-aos-delay="100">
             <div class="stat-figure text-primary">
               <svg
                 fill="#000000"
@@ -187,12 +186,12 @@ import Page from "../layouts/Page.astro";
                 </g></svg
               >
             </div>
-            <div class="stat-title">Cars Washed</div>
+            <div class="stat-title text-xl">Cars Washed</div>
             <div class="stat-value text-primary">50K+</div>
             <div class="stat-desc">Since our founding</div>
           </div>
 
-          <div class="stat">
+          <div class="stat" data-aos="fade-up" data-aos-delay="200">
             <div class="stat-figure text-secondary">
               <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -201,12 +200,12 @@ import Page from "../layouts/Page.astro";
                   clip-rule="evenodd"></path>
               </svg>
             </div>
-            <div class="stat-title">Happy Customers</div>
+            <div class="stat-title text-xl">Happy Customers</div>
             <div class="stat-value text-secondary">12K+</div>
             <div class="stat-desc">And counting</div>
           </div>
 
-          <div class="stat">
+          <div class="stat" data-aos="fade-up" data-aos-delay="300">
             <div class="stat-figure text-accent">
               <svg class="size-8" fill="currentColor" viewBox="0 0 20 20">
                 <path
@@ -215,7 +214,7 @@ import Page from "../layouts/Page.astro";
                   clip-rule="evenodd"></path>
               </svg>
             </div>
-            <div class="stat-title">Years of Experience</div>
+            <div class="stat-title text-xl">Years of Experience</div>
             <div class="stat-value text-accent">10+</div>
             <div class="stat-desc">Serving Sacramento</div>
           </div>
@@ -224,7 +223,7 @@ import Page from "../layouts/Page.astro";
     </section>
 
     <!-- Map Section -->
-    <section class="py-16 lg:px-8 bg-base-200">
+    <section class="py-16 lg:px-8 bg-base-200" data-aos="zoom-in">
       <div class="container mx-auto max-w-4xl text-center">
         <div class="flex flex-col items-center justify-center mb-4">
           <h2 class="text-4xl font-bold text-primary">Our Service Area</h2>
@@ -242,6 +241,20 @@ import Page from "../layouts/Page.astro";
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <!-- Sección del formulario de contacto con imagen de fondo -->
+    <section
+      class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+      data-aos="fade-up"
+    >
+      <!-- Overlay con blur -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+      <!-- Contenido del formulario -->
+      <div class="relative z-10">
+        <ContactForm />
       </div>
     </section>
   </main>
