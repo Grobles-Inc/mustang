@@ -29,10 +29,10 @@ const services = [
       
       {services.map((service) => (
         <div class="group relative h-[541px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-          
+
           <div class="absolute inset-0">
-            <img 
-              src={service.image} 
+            <img
+              src={service.image}
               alt={service.title}
               class="w-full h-full object-cover"
             />
@@ -42,21 +42,28 @@ const services = [
 
           <!-- Contenido -->
           <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <h3 class="text-white text-3xl font-bold mb-4 leading-tight">
+            <h3 class="text-white text-3xl font-bold mb-4 leading-tight"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            >
               {service.title}
             </h3>
-            
-            <button class="inline-flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 group/btn">
-              <span class="text-xl">Book now</span>
-              <svg 
-                class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+            <a href="/contact">            
+              <button class="inline-flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 group/btn cursor-pointer"
+              data-aos="fade-up"
+              data-aos-delay="100"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </button>
+                <span class="text-xl">Book now</span>
+                <svg 
+                  class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </button>
+            </a>
           </div>
 
         </div>

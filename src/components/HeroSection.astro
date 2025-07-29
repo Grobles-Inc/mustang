@@ -16,7 +16,7 @@
   
   <div class="relative z-10 mx-auto w-full">
     <div class="grid lg:grid-cols-2 gap-8 items-center">
-      <div class="order-2 lg:order-1">
+      <div class="order-2 lg:order-1" data-aos="fade-up">
         <div class="relative">
           <img
             src="https://www.pngmart.com/files/10/Red-Ford-Mustang-PNG-Picture.png"
@@ -29,6 +29,7 @@
       <div class="order-1 lg:order-2 text-center lg:text-left pt-10 lg:pt-0">
         <h1
           class="text-4xl lg:text-[80px] font-bold text-white mb-6 leading-tight"
+          data-aos="fade-up"
         >
           <span class="block">SHINE LIKE NEW,</span>
           <span
@@ -38,18 +39,26 @@
           </span>
         </h1>
 
-        <p class="text-lg lg:text-2xl text-white/90 mb-8 max-w-lg lg:max-w-none">
+        <p 
+          class="text-lg lg:text-2xl text-white/90 mb-8 max-w-lg lg:max-w-none"
+          data-aos="fade-up" 
+        >
           At CarWash, we bring out your car's <br> shine with eco-friendly care and <br>
           premium service. Fast, friendly, flawless.
         </p>
 
-        <div class="flex justify-center lg:justify-start">
+        <div 
+          class="flex justify-center lg:justify-start"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+        <a href="/contact">
           <button
-            class="bg-primary hover:bg-white rounded-xl p-4 text-white hover:text-blue-500 transition duration-300 cursor-pointer text-xl flex items-center gap-2 transform hover:scale-105"
+            class="bg-primary hover:bg-white rounded-xl p-4 text-white hover:text-blue-500 transition duration-300 cursor-pointer text-2xl flex items-center gap-2 transform group"
           >
             Reservar ahora
             <svg
-              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+              class="w-5 h-5 transition-transform duration-500 group-hover:rotate-[360deg]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -62,6 +71,7 @@
               ></path>
             </svg>
           </button>
+        </a>
         </div>
       </div>
     </div>
