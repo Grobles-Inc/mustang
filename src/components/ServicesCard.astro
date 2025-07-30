@@ -49,7 +49,7 @@ const services = [
             >
               {service.title}
             </h3>
-            <a href="/contact">            
+            <a href={currentLocale === "en" ? "/contact" : "/es/contact"} class="text-white text-lg mb-4">            
               <button class="inline-flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 group/btn cursor-pointer"
               data-aos="fade-up"
               data-aos-delay="100"
