@@ -10,7 +10,7 @@ const currentLocale = Astro.currentLocale || "en";
     <!-- Company Info -->
     <aside class="flex flex-col items-start">
       <div class="flex items-center gap-2 mb-4">
-        <img src="/logoCarWash.jpg" alt="logo" class="w-full h-20" />
+        <img src="/logoCarWash.png" alt="logo" class="w-full h-20" />
       </div>
       <p class="text-lg leading-relaxed">
         {
@@ -147,19 +147,28 @@ const currentLocale = Astro.currentLocale || "en";
       </h6>
       <ul class="space-y-2">
         <li>
-          <a class="link link-hover text-lg"
-            >{currentLocale === "en" ? "ABOUT US" : "SOBRE NOSOTROS"}</a
+          <a 
+            href={currentLocale === "en" ? "/about" : "/es/about"} 
+            class="link link-hover text-lg"
           >
+            {currentLocale === "en" ? "ABOUT US" : "SOBRE NOSOTROS"}
+          </a>
         </li>
         <li>
-          <a class="link link-hover text-lg"
-            >{currentLocale === "en" ? "CONTACT" : "CONTACTO"}</a
+          <a 
+            href={currentLocale === "en" ? "/contact" : "/es/contact"} 
+            class="link link-hover text-lg"
           >
+            {currentLocale === "en" ? "CONTACT" : "CONTACTO"}
+          </a>
         </li>
         <li>
-          <a class="link link-hover text-lg"
-            >{currentLocale === "en" ? "SERVICES" : "SERVICIOS"}</a
+          <a 
+            href={currentLocale === "en" ? "/services" : "/es/services"} 
+            class="link link-hover text-lg"
           >
+            {currentLocale === "en" ? "SERVICES" : "SERVICIOS"}
+          </a>
         </li>
       </ul>
     </nav>

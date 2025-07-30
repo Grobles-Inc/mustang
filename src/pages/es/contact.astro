@@ -1,251 +1,37 @@
 ---
 import Page from "../../layouts/Page.astro";
+import ContactForm from "../../components/ContactForm.astro";
 ---
 
 <Page
   title="Contacto - CARWASH"
   description="Ponte en contacto con nosotros para preguntas, reservas o comentarios"
 >
-  <main class="min-h-screen bg-base-100">
-    <!-- Hero Section -->
-    <section
-      class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-20"
-    >
-      <div class="hero-content text-center">
-        <div class="max-w-2xl">
-          <h1 class="text-5xl font-bold">Contáctanos</h1>
-          <p class="py-6 text-lg">
-            Nos encantaría saber de ti. Envíanos un mensaje y te responderemos
-            lo antes posible.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-16 px-4 lg:px-8">
-      <div class="container mx-auto max-w-6xl">
-        <div class="grid lg:grid-cols-2 gap-12">
-          <!-- Contact Form -->
-          <div class="card bg-base-200 shadow-xl">
-            <div class="card-body">
-              <h2 class="card-title text-2xl text-primary mb-6">
-                Envíanos un mensaje
-              </h2>
-              <form class="space-y-4">
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text font-medium">Nombre</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Tu nombre"
-                    class="input input-bordered w-full"
-                    required
-                  />
-                </div>
-
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text font-medium"
-                      >Correo electrónico</span
-                    >
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="tu.correo@ejemplo.com"
-                    class="input input-bordered w-full"
-                    required
-                  />
-                </div>
-
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text font-medium">Teléfono</span>
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="(555) 123-4567"
-                    class="input input-bordered w-full"
-                  />
-                </div>
-
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text font-medium">Asunto</span>
-                  </label>
-                  <select class="select select-bordered w-full">
-                    <option disabled selected>Elige un asunto</option>
-                    <option>Consulta General</option>
-                    <option>Pregunta sobre Reserva</option>
-                    <option>Comentarios del Servicio</option>
-                    <option>Asociación Comercial</option>
-                  </select>
-                </div>
-
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text font-medium">Mensaje</span>
-                  </label>
-                  <textarea
-                    class="textarea textarea-bordered h-32"
-                    placeholder="Cuéntanos cómo podemos ayudarte..."
-                    required></textarea>
-                </div>
-
-                <div class="form-control mt-6">
-                  <button class="btn btn-primary">Enviar Mensaje</button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="space-y-8">
-            <div class="card bg-base-200 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title text-2xl text-primary mb-6">
-                  Ponte en contacto
-                </h2>
-                <div class="space-y-4">
-                  <div class="flex items-center gap-4">
-                    <div class="btn btn-circle btn-primary btn-sm">
-                      <svg
-                        class="size-5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="font-medium">Teléfono</p>
-                      <p class="text-sm opacity-70">(555) 123-WASH</p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center gap-4">
-                    <div class="btn btn-circle btn-primary btn-sm">
-                      <svg
-                        class="size-5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-                        ></path>
-                        <path
-                          d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="font-medium">Correo</p>
-                      <p class="text-sm opacity-70">info@carwash.com</p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center gap-4">
-                    <div class="btn btn-circle btn-primary btn-sm">
-                      <svg
-                        class="size-5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="font-medium">Dirección</p>
-                      <p class="text-sm opacity-70">
-                        123 Calle Principal<br />Centro, Ciudad 12345
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center gap-4">
-                    <div class="btn btn-circle btn-primary btn-sm">
-                      <svg
-                        class="size-5"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                          clip-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p class="font-medium">Horarios</p>
-                      <p class="text-sm opacity-70">Lun-Dom: 8AM - 8PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- FAQ -->
-            <div class="card bg-base-200 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title text-2xl text-primary mb-6">
-                  Preguntas Frecuentes
-                </h2>
-                <div class="space-y-2">
-                  <div class="collapse collapse-arrow bg-base-100">
-                    <input
-                      type="radio"
-                      name="faq-accordion"
-                      checked="checked"
-                    />
-                    <div class="collapse-title text-lg font-medium">
-                      ¿Cuánto tiempo toma un lavado de auto?
-                    </div>
-                    <div class="collapse-content">
-                      <p>
-                        La mayoría de los servicios toman 15-30 minutos
-                        dependiendo del paquete que elijas.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="collapse collapse-arrow bg-base-100">
-                    <input type="radio" name="faq-accordion" />
-                    <div class="collapse-title text-lg font-medium">
-                      ¿Necesito hacer una cita?
-                    </div>
-                    <div class="collapse-content">
-                      <p>
-                        Los clientes sin cita son bienvenidos, pero las citas
-                        aseguran un servicio más rápido y tu horario preferido.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="collapse collapse-arrow bg-base-100">
-                    <input type="radio" name="faq-accordion" />
-                    <div class="collapse-title text-lg font-medium">
-                      ¿Qué métodos de pago aceptan?
-                    </div>
-                    <div class="collapse-content">
-                      <p>
-                        Aceptamos efectivo, tarjetas de crédito, tarjetas de
-                        débito y pagos móviles como Apple Pay y Google Pay.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section
+    class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+    style="background-image: url('https://images.unsplash.com/photo-1703609437109-8544f6bd54bd?q=95&w=2000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+  >
+    <div class="absolute inset-0 bg-black/40"></div>
+    
+    <div class="relative z-10">
+      <h2 class="text-white text-4xl font-bold text-center  pt-16 leading-[1.5]" data-aos="fade-up">
+        CONTÁCTANOS: CARWASH
+      </h2>
+      <ContactForm />
+    </div>
+  </section>
+  <div class="max-w-6xl mx-auto p-8 text-left">
+    <h3 class="text-3xl text-primary font-bold mt-4 mb-2" data-aos="fade-up">
+      CONTÁCTANOS
+    </h3>
+    <div class="flex flex-col text-gray-700" data-aos="fade-up">
+      <span class="text-xl font-bold">LLÁMANOS</span>
+      <span>01 259 7413</span>
+      <span class="text-xl font-bold">DIRECCIÓN</span>
+      <span>AV LOREM IPSUM 123</span>
+      <span class="text-xl font-bold">EMAIL</span>
+      <span>contact@contact.com</span>
+    </div>
+  </div>
 </Page>
 
