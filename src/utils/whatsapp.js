@@ -34,7 +34,6 @@ export function sendToWhatsApp(formData, phoneNumber = "51914019629", locale = "
       serviceDate: "*Service Date:*",
       requestedServices: "*Requested Services:*",
       noServices: "No services selected",
-      footer: "*Sent from web form*",
       notSpecified: "Not specified"
     },
     es: {
@@ -46,7 +45,6 @@ export function sendToWhatsApp(formData, phoneNumber = "51914019629", locale = "
       serviceDate: "*Fecha del Servicio:*",
       requestedServices: "*Servicios Solicitados:*",
       noServices: "Ningún servicio seleccionado",
-      footer: "*Enviado desde el formulario web*",
       notSpecified: "No especificado"
     }
   }
@@ -71,10 +69,7 @@ export function sendToWhatsApp(formData, phoneNumber = "51914019629", locale = "
   ${currentLabels.serviceDate} ${formData.fecha || currentLabels.notSpecified}
 
   ${currentLabels.requestedServices}
-  ${servicesText}
-
-  ---
-  ${currentLabels.footer}`;
+  ${servicesText}`;
 
   const encodedMessage = encodeURIComponent(message);
 
