@@ -1,0 +1,122 @@
+---
+const currentLocale = Astro.currentLocale || "en";
+
+const faqData = {
+  en: {
+    title: "Frequently Asked Questions",
+    subtitle: "Everything you need to know about our mobile car wash services",
+    faqs: [
+      {
+        question: "What types of car wash services do you offer?",
+        answer: "We offer a complete range of mobile services including express washes, full-service exterior and interior cleaning, premium detailing, wax applications, tire and rim cleaning, and specialized treatments for luxury vehicles. All services are performed at your location and tailored to your specific needs and budget."
+      },
+      {
+        question: "How long does a typical car wash take?",
+        answer: "Our express mobile wash takes about 10-15 minutes, while a full-service wash typically takes 30-45 minutes. Premium detailing services can take 2-4 hours depending on the package selected and the condition of your vehicle."
+      },
+      {
+        question: "Do you use eco-friendly products?",
+        answer: "Yes! We're committed to environmental responsibility. We use biodegradable soaps and eco-friendly cleaning products that are safe for your car and the environment while delivering exceptional results."
+      },
+      {
+        question: "Do you have a physical location where I can wait?",
+        answer: "No, we are a 100% mobile service and do not have a physical location. We come to your home, office, or wherever your vehicle is located, so you can continue with your day while we take care of your car."
+      },
+
+      {
+        question: "What payment methods do you accept?",
+        answer: "We accept cash, all major credit cards (Visa, MasterCard, American Express), for your convenience."
+      },
+      {
+        question: "Is there a warranty on your services?",
+        answer: "We stand behind our work with a 100% satisfaction guarantee. If you're not completely satisfied with our service, we'll re-wash your vehicle at no additional charge within 24 hours."
+      },
+      {
+        question: "Do you provide services for commercial vehicles?",
+        answer: "Yes, we offer specialized mobile cleaning services for commercial vehicles, including fleets, trucks, vans, and business vehicles. We provide competitive rates and can arrange regular service schedules to meet your business needs."
+      }
+    ]
+  },
+  es: {
+    title: "Preguntas Frecuentes",
+    subtitle: "Todo lo que necesitas saber sobre nuestros servicios de lavado de coches a domicilio",
+    faqs: [
+      {
+        question: "¿Qué tipos de servicios de lavado de coches ofrecen?",
+        answer: "Ofrecemos una gama completa de servicios a domicilio que incluye lavados express, limpieza completa exterior e interior, detallado premium, aplicación de cera, limpieza de llantas y rines, y tratamientos especializados para vehículos de lujo. Todos los servicios se realizan en la ubicación que elijas y se adaptan a tus necesidades y presupuesto."
+      },
+      {
+        question: "¿Cuánto tiempo toma un lavado típico de coche?",
+        answer: "Nuestro lavado express a domicilio toma aproximadamente 10-15 minutos, mientras que un lavado de servicio completo suele tomar 30-45 minutos. Los servicios de detallado premium pueden tomar de 2 a 4 horas dependiendo del paquete seleccionado y la condición de tu vehículo."
+      },
+      {
+        question: "¿Usan productos ecológicos?",
+        answer: "¡Sí! Estamos comprometidos con la responsabilidad ambiental. Usamos jabones biodegradables y productos de limpieza ecológicos que son seguros para tu coche y el medio ambiente, ofreciendo resultados excepcionales."
+      },
+      {
+        question: "¿Tienen local físico donde pueda esperar?",
+        answer: "No, somos un servicio 100% móvil y no contamos con local físico. Vamos a tu domicilio, oficina o donde se encuentre tu vehículo, para que puedas continuar con tus actividades mientras cuidamos tu auto."
+      },
+      {
+        question: "¿Qué métodos de pago aceptan?",
+        answer: "Aceptamos efectivo, todas las tarjetas de crédito principales (Visa, MasterCard, American Express), para tu comodidad."
+      },
+      {
+        question: "¿Hay garantía en sus servicios?",
+        answer: "Respaldamos nuestro trabajo con una garantía de satisfacción 100%. Si no quedas completamente satisfecho con nuestro servicio, lavaremos tu vehículo nuevamente sin costo adicional dentro de las 24 horas."
+      },
+      {
+        question: "¿Proporcionan servicios para vehículos comerciales?",
+        answer: "Sí, ofrecemos servicios móviles especializados de limpieza para vehículos comerciales, flotas, camiones, camionetas y vehículos de empresa. Ofrecemos tarifas competitivas y podemos organizar horarios regulares de servicio para satisfacer las necesidades de tu negocio."
+      }
+    ]
+  }
+};
+
+const content = faqData[currentLocale as keyof typeof faqData];
+---
+
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <!-- Header -->
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold text-base-content mb-4 leading-[1.5]">
+        {content.title}
+      </h2>
+      <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+        {content.subtitle}
+      </p>
+      <div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+      {content.faqs.map((faq, index) => (
+        <>
+          <div class="collapse">
+            <input 
+              type="radio" 
+              name="faq-accordion" 
+              id={`faq-${index}`}
+              class="peer"
+            />
+            <div class="collapse-title text-lg md:text-xl font-semibold text-base-content cursor-pointer">
+              {faq.question}
+            </div>
+            <div class="collapse-content text-base-content/80">
+              <div class="pt-2 pb-4">
+                <p class="leading-relaxed text-lg">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          </div>
+          {index < content.faqs.length - 1 && (
+            <div class="border-t border-base-300 my-2"></div>
+          )}
+        </>
+      ))}
+    </div>
+
+  </div>
+</section>
