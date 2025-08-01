@@ -9,18 +9,44 @@ export function sendToWhatsApp(formData, phoneNumber = "51914019629", locale = "
 
   const serviceNames = {
     en: {
-      "exterior-hand-wash": "Manual Exterior Wash",
-      "automatic-tunnel-wash": "Automatic Tunnel Wash",
-      "seat-carpet-shampooing": "Shampoo of Seats and Carpets",
-      "window-cleaning": "Window Cleaning",
-      "waxing-polishing": "Waxing and Polishing"
+      // Paquetes
+      "salon-wash-service": "Salon Wash Service",
+      "basic-package": "Basic Package",
+      "premium-package": "Premium Package",
+      "detailed-package": "Detailed Package",
+      
+      // Servicios individuales
+      "seat-washing": "Seat Washing",
+      "carpet-washing": "Carpet Washing",
+      "ceiling-washing": "Ceiling Washing",
+      "door-washing": "Door Washing",
+      "body-washing": "Body Washing",
+      "vacuuming": "Vacuuming of carpets, seats and trunk",
+      "interior-cleaning": "Interior cleaning of doors and dashboard",
+      "plastic-conditioner": "Conditioner for interior and exterior plastic parts",
+      "air-application": "Air application to mirrors and handles",
+      "tire-conditioner": "Tire conditioner",
+      "fragrance": "Fragrance",
     },
     es: {
-      "exterior-hand-wash": "Lavado manual exterior",
-      "automatic-tunnel-wash": "Lavado automático en túnel",
-      "seat-carpet-shampooing": "Shampoo de asientos y tapizados",
-      "window-cleaning": "Limpieza de ventanas",
-      "waxing-polishing": "Cera y pulido"
+      // Paquetes
+      "salon-wash-service": "Servicio de lavado de salón",
+      "basic-package": "Paquete básico",
+      "premium-package": "Paquete premium",
+      "detailed-package": "Paquete detallado",
+      
+      // Servicios individuales
+      "seat-washing": "Lavado de asientos",
+      "carpet-washing": "Lavado de alfombras",
+      "ceiling-washing": "Lavado de techo",
+      "door-washing": "Lavado de puertas",
+      "body-washing": "Lavado de carrocería",
+      "vacuuming": "Aspirado de alfombras, asientos y maletero",
+      "interior-cleaning": "Limpieza interior de puertas y tablero",
+      "plastic-conditioner": "Acondicionador a las partes plásticas interior e exterior",
+      "air-application": "Aplicación de aire a los espejos y manijas",
+      "tire-conditioner": "Acondicionador de neumáticos",
+      "fragrance": "Aromatizado",
     }
   }
 

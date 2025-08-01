@@ -180,85 +180,258 @@ const currentLocale = Astro.currentLocale || "en";
                 }
               </h4>
               <div class="space-y-3">
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="servicios"
-                    value="exterior-hand-wash"
-                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <span class="text-xl text-gray-700"
-                    >{
-                      currentLocale === "en"
-                        ? "Manual Exterior Wash"
-                        : "Lavado manual exterior"
-                    }</span
-                  >
-                </label>
+                <!-- Paquetes -->
+                <div class="border-b border-gray-200 pb-4 mb-4">
+                  <h5 class="text-lg font-semibold text-gray-700 mb-3">
+                    {currentLocale === "en" ? "Packages" : "Paquetes"}
+                  </h5>
+                  
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="salon-wash-service"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Salon Wash Service"
+                          : "Servicio de lavado de salón"
+                      }</span
+                    >
+                  </label>
 
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="servicios"
-                    value="automatic-tunnel-wash"
-                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <span class="text-xl text-gray-700"
-                    >{
-                      currentLocale === "en"
-                        ? "Automatic Tunnel Wash"
-                        : "Lavado automático en túnel"
-                    }</span
-                  >
-                </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="basic-package"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Basic Package"
+                          : "Paquete básico"
+                      }</span
+                    >
+                  </label>
 
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="servicios"
-                    value="seat-carpet-shampooing"
-                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <span class="text-xl text-gray-700"
-                    >{
-                      currentLocale === "en"
-                        ? "Shampoo of Seats and Carpets"
-                        : "Shampoo de asientos y tapizados"
-                    }</span
-                  >
-                </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="premium-package"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Premium Package"
+                          : "Paquete premium"
+                      }</span
+                    >
+                  </label>
 
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="servicios"
-                    value="window-cleaning"
-                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <span class="text-xl text-gray-700"
-                    >{
-                      currentLocale === "en"
-                        ? "Window Cleaning"
-                        : "Limpieza de ventanas"
-                    }</span
-                  >
-                </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="detailed-package"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Detailed Package"
+                          : "Paquete detallado"
+                      }</span
+                    >
+                  </label>
+                </div>
+                <!-- Servicios individuales -->
+                <div>
+                  <h5 class="text-lg font-semibold text-gray-700 mb-3">
+                    {currentLocale === "en" ? "Individual Services" : "Servicios Individuales"}
+                  </h5>
+                  
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="seat-washing"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Seat Washing"
+                          : "Lavado de asientos"
+                      }</span
+                    >
+                  </label>
 
-                <label class="flex items-center space-x-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    name="servicios"
-                    value="waxing-polishing"
-                    class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <span class="text-xl text-gray-700">
-                    {
-                      currentLocale === "en"
-                        ? "Waxing and Polishing"
-                        : "Cera y pulido"
-                    }</span
-                  >
-                </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="carpet-washing"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Carpet Washing"
+                          : "Lavado de alfombras"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="ceiling-washing"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Ceiling Washing"
+                          : "Lavado de techo"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="door-washing"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Door Washing"
+                          : "Lavado de puertas"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="body-washing"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Body Washing"
+                          : "Lavado de carrocería"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="vacuuming"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Vacuuming of carpets, seats and trunk"
+                          : "Aspirado de alfombras, asientos y maletero"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="interior-cleaning"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Interior cleaning of doors and dashboard"
+                          : "Limpieza interior de puertas y tablero"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="plastic-conditioner"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Conditioner for interior and exterior plastic parts"
+                          : "Acondicionador a las partes plásticas interior e exterior"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="air-application"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Air application to mirrors and handles"
+                          : "Aplicación de aire a los espejos y manijas"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="tire-conditioner"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Tire conditioner"
+                          : "Acondicionador de neumáticos"
+                      }</span
+                    >
+                  </label>
+
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="servicios"
+                      value="fragrance"
+                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    />
+                    <span class="text-xl text-gray-700"
+                      >{
+                        currentLocale === "en"
+                          ? "Fragrance"
+                          : "Aromatizado"
+                      }</span
+                    >
+                  </label>
+                </div>
               </div>
             </div>
 

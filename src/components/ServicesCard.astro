@@ -2,24 +2,59 @@
 const currentLocale = Astro.currentLocale || "en";
 const services = [
   {
-    title: currentLocale === "en" ? "Exterior Hand Wash" : "Lavado manual exterior",
-    image: "https://images.unsplash.com/photo-1669833886433-0d54434a58ad?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: currentLocale === "en" ? "Clean and protect your car's exterior with a gentle hand wash and wax." : "Limpia y protege el exterior de tu coche con un lavado manual y cera.",
-  },
-  {
-    title: currentLocale === "en" ? "Automatic Tunnel Wash" : "Lavado automático en túnel",
-    image: "https://images.unsplash.com/photo-1608506375591-b90e1f955e4b?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: currentLocale === "en" ? "Let our automatic tunnel wash clean your car with precision and speed." : "Deja que nuestro lavado automático en túnel limpie tu coche con precisión y rapidez.",
-  },
-  {
-    title: currentLocale === "en" ? "Seat and Carpet Shampooing" : "Shampoo de asientos y tapizados",
-    image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: currentLocale === "en" ? "Clean and protect your car's interior with a gentle shampooing." : "Limpia y protege el interior de tu coche con un shampoo suave.",
-  },
-  {
-        title: currentLocale === "en" ? "Interior Vacuuming" : "Vacío de interior",
+    title: currentLocale === "en" ? "Seat Cleaning" : "Lavado de asientos",
     image: "https://images.unsplash.com/photo-1608259243654-70c070e0f6ed?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: currentLocale === "en" ? "Clean and protect your car's interior with a gentle vacuuming." : "Limpia y protege el interior de tu coche con un aspirado suave.",
+    description: currentLocale === "en" ? "Deep cleaning of seats to remove stains, odors, and dust." : "Limpieza profunda de asientos para eliminar manchas, olores y polvo.",
+  },
+  {
+    title: currentLocale === "en" ? "Carpet Cleaning" : "Lavado de alfombras",
+    image: "https://plus.unsplash.com/premium_photo-1661494244080-00d15ad150ca?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: currentLocale === "en" ? "Cleaning and deodorizing of vehicle carpets." : "Limpieza y desodorización de alfombras del vehículo.",
+  },
+  {
+    title: currentLocale === "en" ? "Roof Cleaning" : "Lavado de techo",
+    image: "https://i.ibb.co/rRT1vbDM/Gemini-Generated-Image-svyvvssvyvvssvyv.png",
+    description: currentLocale === "en" ? "Removal of dirt and marks from the vehicle roof." : "Eliminación de suciedad y marcas en el techo del vehículo.",
+  },
+  {
+    title: currentLocale === "en" ? "Door Cleaning" : "Lavado de puertas",
+    image: "https://i.ibb.co/xtFS6Gt4/Gemini-Generated-Image-jpso7wjpso7wjpso.png",
+    description: currentLocale === "en" ? "Complete cleaning of doors, both inside and outside." : "Limpieza total de puertas, tanto en el interior como en el exterior.",
+  },
+  {
+    title: currentLocale === "en" ? "Body Wash" : "Lavado de carrocería",
+    image: "https://i.ibb.co/fGB9LhHH/Gemini-Generated-Image-wvtwfcwvtwfcwvtw.png",
+    description: currentLocale === "en" ? "Premium treatment for the bodywork that removes dirt and opacity." : "Tratamiento premium para la carrocería que elimina suciedad y opacidad.",
+  },
+  {
+    title: currentLocale === "en" ? "Vacuuming of carpets, seats and trunk" : "Aspirado de alfombras, asientos y maletero",
+    image: "https://i.ibb.co/MyfFPZ3S/Gemini-Generated-Image-30af1w30af1w30af.png",
+    description: currentLocale === "en" ? "Deep cleaning of all interior areas." : "Limpieza profunda de todas las áreas interiores.",
+  },
+  {
+    title: currentLocale === "en" ? "Interior cleaning of doors and dashboard" : "Limpieza interior de puertas y tablero",
+    image: "https://plus.unsplash.com/premium_photo-1661495725810-0e92d20311ab?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: currentLocale === "en" ? "Detail cleaning of all interior surfaces." : "Detallado de todas las superficies interiores.",
+  },
+  {
+    title: currentLocale === "en" ? "Interior and exterior plastic parts conditioner" : "Acondicionador a las partes plásticas interior e exterior",
+    image: "https://i.ibb.co/C578YYKj/Acondicionador-a-las-partes-pl-sticas-interior-e-exterior.jpg",
+    description: currentLocale === "en" ? "Protection and shine for plastic parts." : "Protección y brillo para las partes plásticas.",
+  },
+  {
+    title: currentLocale === "en" ? "Air application to mirrors and handles" : "Aplicación de aire a los espejos y manijas",
+    image: "https://i.ibb.co/ymC5jff0/Chat-GPT-Image-1-ago-2025-12-20-32-p-m.png",
+    description: currentLocale === "en" ? "Cleaning and detailing of mirrors and handles." : "Limpieza y detallado de los espejos y manijas.",
+  },
+  {
+    title: currentLocale === "en" ? "Tyre conditioner" : "Acondicionador de neumáticos",
+    image: "https://images.unsplash.com/photo-1565689876697-e467b6c54da2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: currentLocale === "en" ? "Protection and shine for tires." : "Protección y brillo para los neumáticos.",
+  },
+  {
+    title: currentLocale === "en" ? "Scented" : "Aromatizado",
+    image: "https://i.ibb.co/twGjPxNL/Limpieza-interior-de-puertas-y-tablero3.jpg",
+    description: currentLocale === "en" ? "Adds a touch of freshness to the interior of the vehicle." : "Añade un toque de frescura al interior del vehículo.",
   },
 ]
 
@@ -49,6 +84,10 @@ const services = [
             >
               {service.title}
             </h3>
+            <p class="text-white text-xl mb-4" data-aos="fade-up"
+            data-aos-delay="100">
+              {service.description}
+            </p>
             <a href={currentLocale === "en" ? "/contact" : "/es/contact"} class="text-white text-lg mb-4">            
               <button class="inline-flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 group/btn cursor-pointer"
               data-aos="fade-up"

@@ -3,6 +3,7 @@ import Page from "@layouts/Page.astro";
 import HeroSection from "@components/HeroSection.astro";
 import ServicesCard from "@components/ServicesCard.astro";
 import ContactForm from "@components/ContactForm.astro";
+import PackageSection from "@components/PackageSection.astro";
 ---
 
 <Page
@@ -11,8 +12,8 @@ import ContactForm from "@components/ContactForm.astro";
 >
 	<HeroSection />
 	<ServicesCard />
-
-	<div class="flex flex-col justify-center items-center mt-10 gap-4">
+	<PackageSection />
+	<div class="flex flex-col justify-center items-center mt-20 gap-4">
 		<img src="/logoCarWash.png" alt="logoCarWash" class="h-20 w-auto" />
 		<div class="w-px h-24 bg-black" data-aos="fade-up"></div>
 		<p class="text-center max-w-md text-xl" data-aos="fade-up">
