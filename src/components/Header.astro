@@ -45,15 +45,6 @@ const currentLocale = Astro.currentLocale || "en";
       </li>
       <li>
         <a
-          href={currentLocale === "en" ? "/contact" : "/es/contact"}
-          class="text-xl px-3 py-2 relative transition-colors duration-200 hover:text-primary
-            before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-primary before:transition-all before:duration-300 hover:before:w-full before:rounded"
-          style="overflow:hidden"
-          >{currentLocale === "en" ? "Contact" : "Contacto"}</a
-        >
-      </li>
-      <li>
-        <a
           href={currentLocale === "en" ? "/services" : "/es/services"}
           class="text-xl px-3 py-2 relative transition-colors duration-200 hover:text-primary
             before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-primary before:transition-all before:duration-300 hover:before:w-full before:rounded"
@@ -61,6 +52,16 @@ const currentLocale = Astro.currentLocale || "en";
           >{currentLocale === "en" ? "Services" : "Servicios"}</a
         >
       </li>
+      <li>
+        <a
+          href={currentLocale === "en" ? "/contact" : "/es/contact"}
+          class="text-xl px-3 py-2 relative transition-colors duration-200 hover:text-primary
+            before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-primary before:transition-all before:duration-300 hover:before:w-full before:rounded"
+          style="overflow:hidden"
+          >{currentLocale === "en" ? "Contact" : "Contacto"}</a
+        >
+      </li>
+      
     </ul>
   </div>
 

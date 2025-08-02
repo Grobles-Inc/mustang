@@ -23,16 +23,16 @@ const currentLocale = Astro.currentLocale || "en";
       </li>
       <li>
         <a
-          href={currentLocale === "en" ? "/contact" : "/es/contact"}
+          href={currentLocale === "en" ? "/services" : "/es/services"}
           class="btn btn-ghost justify-start text-xl"
-          >{currentLocale === "en" ? "Contact" : "Contacto"}</a
+          >{currentLocale === "en" ? "Services" : "Servicios"}</a
         >
       </li>
       <li>
         <a
-          href={currentLocale === "en" ? "/services" : "/es/services"}
+          href={currentLocale === "en" ? "/contact" : "/es/contact"}
           class="btn btn-ghost justify-start text-xl"
-          >{currentLocale === "en" ? "Services" : "Servicios"}</a
+          >{currentLocale === "en" ? "Contact" : "Contacto"}</a
         >
       </li>
       <li class="mt-4">
