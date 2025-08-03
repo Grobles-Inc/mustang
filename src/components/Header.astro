@@ -26,11 +26,13 @@ const currentLocale = Astro.currentLocale || "en";
     </label>
 
     <!-- Logo -->
-    <a href="/">
-      <img src="/logoCarWash.png" alt="logoCarWash" class="h-20 w-auto" />
+    <a href="/" class="hidden lg:block">
+      <img src="/logo.jpg" alt="logoCarWash" class="h-24 w-auto" />
     </a>
   </div>
-
+  <a href="/" class="lg:hidden">
+    <img src="/logo.jpg" alt="logoCarWash" class="h-16 w-36" />
+  </a>
   <!-- Desktop Navigation -->
   <div class="navbar-center hidden lg:flex">
     <ul class="flex px-1 gap-2">
@@ -61,7 +63,6 @@ const currentLocale = Astro.currentLocale || "en";
           >{currentLocale === "en" ? "Contact" : "Contacto"}</a
         >
       </li>
-      
     </ul>
   </div>
 

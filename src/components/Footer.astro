@@ -2,7 +2,7 @@
 const currentLocale = Astro.currentLocale || "en";
 ---
 
-<footer class="footer bg-base-200 text-base-content p-10">
+<footer class="footer bg-base-100 text-base-content p-10">
   <div
     class="footer-center grid grid-cols-1 md:grid-cols-4 gap-8 w-full max-w-6xl mx-auto"
     data-aos="fade-up"
@@ -10,7 +10,7 @@ const currentLocale = Astro.currentLocale || "en";
     <!-- Company Info -->
     <aside class="flex flex-col items-start">
       <div class="flex items-center gap-2 mb-4">
-        <img src="/logoCarWash.png" alt="logo" class="w-auto h-20" />
+        <img src="/logo.jpg" alt="logo" class="w-auto h-20" />
       </div>
       <p class="text-lg leading-relaxed">
         {
@@ -147,24 +147,24 @@ const currentLocale = Astro.currentLocale || "en";
       </h6>
       <ul class="space-y-2">
         <li>
-          <a 
-            href={currentLocale === "en" ? "/about" : "/es/about"} 
+          <a
+            href={currentLocale === "en" ? "/about" : "/es/about"}
             class="link link-hover text-lg"
           >
             {currentLocale === "en" ? "ABOUT US" : "SOBRE NOSOTROS"}
           </a>
         </li>
         <li>
-          <a 
-            href={currentLocale === "en" ? "/contact" : "/es/contact"} 
+          <a
+            href={currentLocale === "en" ? "/contact" : "/es/contact"}
             class="link link-hover text-lg"
           >
             {currentLocale === "en" ? "CONTACT" : "CONTACTO"}
           </a>
         </li>
         <li>
-          <a 
-            href={currentLocale === "en" ? "/services" : "/es/services"} 
+          <a
+            href={currentLocale === "en" ? "/services" : "/es/services"}
             class="link link-hover text-lg"
           >
             {currentLocale === "en" ? "SERVICES" : "SERVICIOS"}
@@ -183,14 +183,14 @@ const currentLocale = Astro.currentLocale || "en";
           <p class="text-lg font-medium">
             {currentLocale === "en" ? "CALL US" : "LLAMANOS"}
           </p>
-          <p class="text-lg">+1 (279) 268-6610</p>
+          <p class="text-lg">+1 (279) 272-7136</p>
         </div>
 
         <!-- Social Icons -->
         <div class="flex gap-3 mt-4">
           <a
             class="btn btn-circle btn-ghost btn-sm"
-            href="https://wa.me/12792686610?text=Hello"
+            href="https://wa.me/12792727136?text=Hello"
           >
             <svg
               class="size-6"
