@@ -7,10 +7,14 @@ import "../styles/global.css";
 export interface Props {
   title: string;
   description: string;
+  canonicalURL?: string;
+  image?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, canonicalURL, image } = Astro.props;
 const currentLocale = Astro.currentLocale || "en";
+const url = new URL(Astro.request.url);
+const canonical = canonicalURL || url.href;
 ---
 
 <!doctype html>
@@ -18,9 +22,34 @@ const currentLocale = Astro.currentLocale || "en";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image || "/logoCarWash.png"} />
+    <meta property="og:locale" content={currentLocale} />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image || "/logoCarWash.png"} />
+    
+    <!-- Hreflang para internacionalización -->
+    <link rel="alternate" hreflang="en" href={url.origin} />
+    <link rel="alternate" hreflang="es" href={`${url.origin}/es`} />
+    <link rel="alternate" hreflang="x-default" href={url.origin} />
+    
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
@@ -63,4 +92,22 @@ const currentLocale = Astro.currentLocale || "en";
   document.addEventListener('astro:page-load', () => {
     AOS.refresh();
   });
+</script>
+
+<!-- Agregar después de los meta tags -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mustang Car Wash",
+  "description": "Professional mobile car wash and detailing services in Sacramento, CA",
+  "url": "https://mustangcarwashmovil.vercel.app/",
+  "telephone": "+1 (279) 272-7136",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sacramento",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+}
 </script>
