@@ -5,7 +5,7 @@
  * @param {string} locale
  * @returns {string} 
  */
-export function sendToWhatsApp(formData, phoneNumber = "51901617809", locale = "en") {
+export function sendToWhatsApp(formData, phoneNumber = "12792727136", locale = "en") {
 
   const serviceNames = {
     en: {
@@ -110,7 +110,7 @@ export function sendToWhatsApp(formData, phoneNumber = "51901617809", locale = "
  * @param {string} phoneNumber 
  * @param {string} locale
  */
-export function openWhatsApp(formData, phoneNumber = "51901617809", locale = "en") {
+export function openWhatsApp(formData, phoneNumber = "12792727136", locale = "en") {
   const whatsappURL = sendToWhatsApp(formData, phoneNumber, locale);
   window.open(whatsappURL, '_blank');
 }
@@ -121,7 +121,7 @@ export function openWhatsApp(formData, phoneNumber = "51901617809", locale = "en
  * @param {string} phoneNumber
  * @param {string} locale
  */
-export function handleFormSubmit(event, phoneNumber = "51901617809", locale = "en") {
+export function handleFormSubmit(event, phoneNumber = "12792727136", locale = "en") {
   event.preventDefault();
 
   const form = event.target;
