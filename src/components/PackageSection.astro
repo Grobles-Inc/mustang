@@ -9,9 +9,11 @@ const currentLocale = Astro.currentLocale || "en";
         {currentLocale === "en" ? "Our Packages" : "Nuestros Paquetes"}
       </h2>
       <p class="py-6 text-xl">
-        {currentLocale === "en" 
-          ? "Choose the package that best suits your needs." 
-          : "Elige el paquete que mejor se adapte a tus necesidades."}
+        {
+          currentLocale === "en"
+            ? "Choose the package that best suits your needs."
+            : "Elige el paquete que mejor se adapte a tus necesidades."
+        }
       </p>
     </div>
   </div>
@@ -26,111 +28,53 @@ const currentLocale = Astro.currentLocale || "en";
         class="text-2xl font-bold mb-4 text-primary uppercase"
         data-aos="fade-up"
       >
-        {currentLocale === "en" ? "Salon Wash Service" : "Servicio de lavado de salón"}
-      </h3>
-      <p class="text-gray-700 text-lg mb-6 text-left" data-aos="fade-up">
-        {currentLocale === "en" 
-          ? "The salon wash service is a comprehensive process that involves deep cleaning of all interior and exterior areas of the vehicle."
-          : "El servicio de lavado de salón al detalle es un proceso exhaustivo que implica la limpieza profunda de todas las áreas interiores y exteriores del vehículo."}
-      </p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span
-          class="bg-blue-100 text-primary text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Contains all services" : "Contiene todos los servicios"}</span
-        >
-        <span
-          class="bg-gray-200 text-gray-800 text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Duration: 1-2 hours" : "Duración: 1 a 2 horas"}</span
-        >
-      </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        <ul class="text-gray-700 text-sm space-y-2">
-          <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Seat washing" : "Lavado de asientos"}</li>
-          <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Carpet washing" : "Lavado de alfombras"}</li>
-          <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Ceiling washing" : "Lavado de techo"}</li>
-          <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Door washing" : "Lavado de puertas"}</li>
-          <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Body washing" : "Lavado de carrocería"}</li>
-          <li>
-            <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Vacuuming of carpets, seats and trunk" : "Aspirado de alfombras, asientos y maletero"}
-          </li>
-        </ul>
-        <ul class="text-gray-700 text-sm space-y-2">
-          <li>
-            <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Interior cleaning of doors and dashboard" : "Limpieza interior de puertas y tablero"}
-          </li>
-          <li>
-            <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Conditioner for interior and exterior plastic parts" : "Acondicionador a las partes plásticas interior e exterior"}
-          </li>
-          <li>
-            <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Air application to mirrors and handles" : "Aplicación de aire a los espejos y manijas"}
-          </li>
-          <li>
-            <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Tire conditioner" : "Acondicionador de neumáticos"}
-          </li>
-          <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Fragrance" : "Aromatizado"}</li>
-        </ul>
-      </div>
-      <a href={currentLocale === "en" ? "/contact" : "/es/contact"} class="w-full">
-        <button
-          class="w-full inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-2 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 group/btn cursor-pointer"
-        >
-          {currentLocale === "en" ? "Book now" : "Reservar ahora"}
-          <svg
-            class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </button>
-      </a>
-    </div>
-
-    <!-- Paquete Intermedio -->
-    <div
-      class="group relative bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-8 hover:shadow-2xl transition-all duration-300"
-    >
-      <h3
-        class="text-2xl font-bold mb-4 text-primary uppercase"
-        data-aos="fade-up"
-      >
         {currentLocale === "en" ? "Basic Package" : "Paquete básico"}
       </h3>
       <p class="text-gray-700 text-lg mb-6 text-left" data-aos="fade-up">
-        {currentLocale === "en" 
-          ? "The basic package is an economical option that includes the most essential salon wash services to keep your vehicle clean and in good condition."
-          : "El paquete básico es una opción económica que incluye los servicios más esenciales de lavado de salón para mantener tu vehículo limpio y en buen estado."}
+        {
+          currentLocale === "en"
+            ? "The basic package is an economical option that includes the most essential salon wash services to keep your vehicle clean and in good condition."
+            : "El paquete básico es una opción económica que incluye los servicios más esenciales de lavado de salón para mantener tu vehículo limpio y en buen estado."
+        }
       </p>
-      <div class="flex flex-wrap gap-2 mb-4">
+      <div class="flex flex-wrap gap-2 mb-4" data-aos="fade-up">
         <span
           class="bg-blue-100 text-primary text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Contains some services" : "Contiene algunos servicios"}</span
+          >{
+            currentLocale === "en"
+              ? "Contains some services"
+              : "Contiene algunos servicios"
+          }</span
         >
         <span
           class="bg-gray-200 text-gray-800 text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Duration: 1 hour" : "Duración: 1 hora"}</span
+          >{
+            currentLocale === "en" ? "Duration: 1 hour" : "Duración: 1 hora"
+          }</span
         >
       </div>
       <ul
-        class="text-gray-700 text-lg mb-6 space-y-2 text-left"
+        class="text-gray-700 text-lg mb-6 space-y-2 text-left w-full"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Exterior wash" : "Lavado exterior"}</li>
-        <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Interior wash" : "Lavado interior"}</li>
-        <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Exterior cleaning" : "Limpieza de exterior"}</li>
-        <li><span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Interior cleaning" : "Limpieza de interior"}</li>
+        <li>
+          <span class="text-primary mr-2">•</span>{
+            currentLocale === "en" ? "Exterior wash" : "Lavado exterior"
+          }
+        </li>
+        <li>
+          <span class="text-primary mr-2">•</span>{
+            currentLocale === "en"
+              ? "Interior cleaning"
+              : "Limpieza de interior"
+          }
+        </li>
       </ul>
-      <a href={currentLocale === "en" ? "/contact" : "/es/contact"} class="w-full">
+      <a
+        href={currentLocale === "en" ? "/contact" : "/es/contact"}
+        class="w-full"
+      >
         <button
           class="w-full inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-2 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 group/btn cursor-pointer"
         >
@@ -162,42 +106,109 @@ const currentLocale = Astro.currentLocale || "en";
         {currentLocale === "en" ? "Premium Package" : "Paquete premium"}
       </h3>
       <p class="text-gray-700 text-lg mb-6 text-left" data-aos="fade-up">
-        {currentLocale === "en" 
-          ? "The premium package is an option that includes all basic package services, plus additional services to keep your vehicle in perfect condition."
-          : "El paquete premium es una opción que incluye todos los servicios del paquete básico, además de algunos servicios adicionales para mantener tu vehículo en perfectas condiciones."}
+        {
+          currentLocale === "en"
+            ? "The premium package is an option that includes all basic package services, plus additional services to keep your vehicle in perfect condition."
+            : "El paquete premium es una opción que incluye todos los servicios del paquete básico, además de algunos servicios adicionales para mantener tu vehículo en perfectas condiciones."
+        }
       </p>
-      <div class="flex flex-wrap gap-2 mb-4">
+      <div class="flex flex-wrap gap-2 mb-4" data-aos="fade-up">
         <span
           class="bg-blue-100 text-primary text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Contains more services" : "Contiene más servicios"}</span
+          >{
+            currentLocale === "en"
+              ? "Contains more services"
+              : "Contiene más servicios"
+          }</span
         >
         <span
           class="bg-gray-200 text-gray-800 text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Duration: 1-2 hours" : "Duración: 1 a 2 horas"}</span
+          >{
+            currentLocale === "en"
+              ? "Duration: 1-2 hours"
+              : "Duración: 1 a 2 horas"
+          }</span
         >
       </div>
-      <ul
-        class="text-gray-700 text-lg mb-6 space-y-2 text-left"
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Detailed exterior wash" : "Lavado exterior detallado"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Detailed interior wash" : "Lavado interior detallado"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Deep exterior cleaning" : "Limpieza exterior profunda"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Deep interior cleaning" : "Limpieza interior profunda"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Surface conditioning" : "Acondicionamiento de superficies"}
-        </li>
-      </ul>
-      <a href={currentLocale === "en" ? "/contact" : "/es/contact"} class="w-full">
+        <ul class="text-gray-700 text-sm space-y-2">
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Seat washing" : "Lavado de asientos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Carpet washing" : "Lavado de alfombras"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Ceiling washing" : "Lavado de techo"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Door washing" : "Lavado de puertas"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Body washing" : "Lavado de carrocería"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Vacuuming of carpets, seats and trunk"
+                : "Aspirado de alfombras, asientos y maletero"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Interior cleaning of doors and dashboard"
+                : "Limpieza interior de puertas y tablero"
+            }
+          </li>
+        </ul>
+        <ul class="text-gray-700 text-sm space-y-2">
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Cleaning and conditioning of interior plastic"
+                : "Lavado y acondicionamiento de los plásticos internos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Air application to mirrors and handles"
+                : "Aplicación de aire a los espejos y manijas"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Tire conditioner"
+                : "Acondicionador de neumáticos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Fragrance" : "Aromatizado"
+            }
+          </li>
+        </ul>
+      </div>
+      <a
+        href={currentLocale === "en" ? "/contact" : "/es/contact"}
+        class="w-full"
+      >
         <button
           class="w-full inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-2 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 group/btn cursor-pointer"
         >
@@ -218,7 +229,7 @@ const currentLocale = Astro.currentLocale || "en";
       </a>
     </div>
 
-    <!-- Paquete Detallado -->
+    <!-- Paquete Lavado de Salón -->
     <div
       class="group relative bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-8 hover:shadow-2xl transition-all duration-300"
     >
@@ -226,48 +237,240 @@ const currentLocale = Astro.currentLocale || "en";
         class="text-2xl font-bold mb-4 text-primary uppercase"
         data-aos="fade-up"
       >
-        {currentLocale === "en" ? "Detailed Package" : "Paquete detallado"}
+        {
+          currentLocale === "en"
+            ? "Salon Wash Service"
+            : "Servicio de lavado de salón"
+        }
       </h3>
       <p class="text-gray-700 text-lg mb-6 text-left" data-aos="fade-up">
-        {currentLocale === "en" 
-          ? "The detailed package is an option that includes all salon wash package services, plus additional services to keep your vehicle in perfect condition."
-          : "El paquete detallado es una opción que incluye todos los servicios del paquete lavado de salón, además de algunos servicios adicionales para mantener tu vehículo en perfectas condiciones."}
+        {
+          currentLocale === "en"
+            ? "The salon wash service is a comprehensive process that involves deep cleaning of all interior and exterior areas of the vehicle."
+            : "El servicio de lavado de salón al detalle es un proceso exhaustivo que implica la limpieza profunda de todas las áreas interiores y exteriores del vehículo."
+        }
       </p>
-      <div class="flex flex-wrap gap-2 mb-4">
+      <div class="flex flex-wrap gap-2 mb-4" data-aos="fade-up">
         <span
           class="bg-blue-100 text-primary text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Contains all services" : "Contiene todos los servicios"}</span
+          >{
+            currentLocale === "en"
+              ? "Contains all services"
+              : "Contiene todos los servicios"
+          }</span
         >
         <span
           class="bg-gray-200 text-gray-800 text-sm font-semibold px-3 py-1 rounded-full"
-          >{currentLocale === "en" ? "Duration: 2-3 hours" : "Duración: 2 a 3 horas"}</span
+          >{
+            currentLocale === "en"
+              ? "Duration: 1-2 hours"
+              : "Duración: 2 a 3 horas"
+          }</span
         >
       </div>
-      <ul
-        class="text-gray-700 text-lg mb-6 space-y-2 text-left"
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-6"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Detailed exterior wash" : "Lavado exterior detallado"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Detailed interior wash" : "Lavado interior detallado"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Deep exterior cleaning" : "Limpieza exterior profunda"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Deep interior cleaning" : "Limpieza interior profunda"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Surface conditioning" : "Acondicionamiento de superficies"}
-        </li>
-        <li>
-          <span class="text-primary mr-2">•</span>{currentLocale === "en" ? "Paint protection" : "Protección de pintura"}
-        </li>
-      </ul>
-      <a href={currentLocale === "en" ? "/contact" : "/es/contact"} class="w-full">
+        <ul class="text-gray-700 text-sm space-y-2">
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Seat washing" : "Lavado de asientos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Carpet washing" : "Lavado de alfombras"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Ceiling washing" : "Lavado de techo"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Door washing" : "Lavado de puertas"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Body washing" : "Lavado de carrocería"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Vacuuming of carpets, seats and trunk"
+                : "Aspirado de alfombras, asientos y maletero"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Interior cleaning of doors and dashboard"
+                : "Limpieza interior de puertas y tablero"
+            }
+          </li>
+        </ul>
+        <ul class="text-gray-700 text-sm space-y-2">
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Cleaning and conditioning of interior plastic"
+                : "Lavado y acondicionamiento de los plásticos internos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Air application to mirrors and handles"
+                : "Aplicación de aire a los espejos y manijas"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Tire conditioner"
+                : "Acondicionador de neumáticos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Fragrance" : "Aromatizado"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Wax application" : "Aplicación de cera"
+            }
+          </li>
+        </ul>
+      </div>
+      <a
+        href={currentLocale === "en" ? "/contact" : "/es/contact"}
+        class="w-full"
+      >
+        <button
+          class="w-full inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-2 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 group/btn cursor-pointer"
+        >
+          {currentLocale === "en" ? "Book now" : "Reservar ahora"}
+          <svg
+            class="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </button>
+      </a>
+    </div>
+
+    <!-- Servicios Individuales -->
+    <div
+      class="group relative bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-8 hover:shadow-2xl transition-all duration-300"
+    >
+      <h3
+        class="text-2xl font-bold mb-4 text-primary uppercase"
+        data-aos="fade-up"
+      >
+        {
+          currentLocale === "en"
+            ? "Individual Services"
+            : "Servicios Individuales"
+        }
+      </h3>
+      <p class="text-gray-700 text-lg mb-6 text-left" data-aos="fade-up">
+        {
+          currentLocale === "en"
+            ? "Choose only the services you need for your vehicle. Personalize your experience by selecting individual options."
+            : "Elige solo los servicios que necesitas para tu vehículo. Personaliza tu experiencia seleccionando opciones individuales."
+        }
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4" data-aos="fade-up">
+        <span
+          class="bg-blue-100 text-primary text-sm font-semibold px-3 py-1 rounded-full"
+          >{currentLocale === "en" ? "Customizable" : "Personalizable"}</span
+        >
+        <span
+          class="bg-gray-200 text-gray-800 text-sm font-semibold px-3 py-1 rounded-full"
+          >{
+            currentLocale === "en" ? "Duration: Varies" : "Duración: Variable"
+          }</span
+        >
+      </div>
+      <div
+        class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 text-lg mb-6"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <ul class="space-y-2 text-sm text-left w-full">
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Seat washing" : "Lavado de asientos"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en" ? "Carpet washing" : "Lavado de alfombras"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Ceiling stain removal"
+                : "Desmanchado de techo"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Cleaning and conditioning of interior plastic"
+                : "Lavado y acondicionamiento de los plásticos internos"
+            }
+          </li>
+        </ul>
+        <ul class="space-y-2 text-sm text-left w-full">
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Bodywork cleaning"
+                : "Lavado de carrocería"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Detailed engine cleaning"
+                : "Lavado de motor al detalle"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Paint correction"
+                : "Corrección de pintura"
+            }
+          </li>
+          <li>
+            <span class="text-primary mr-2">•</span>{
+              currentLocale === "en"
+                ? "Polish application"
+                : "Aplicación de polish"
+            }
+          </li>
+        </ul>
+      </div>
+      <a
+        href={currentLocale === "en" ? "/contact" : "/es/contact"}
+        class="w-full"
+      >
         <button
           class="w-full inline-flex items-center justify-center border-2 border-primary text-primary px-6 py-2 rounded-lg text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 group/btn cursor-pointer"
         >
@@ -289,10 +492,12 @@ const currentLocale = Astro.currentLocale || "en";
     </div>
   </div>
   <div
-    class="text-center mb-6 mt-10 bg-primary mx-auto py-5 text-xl text-white"
+    class="text-center mb-6 mt-20 bg-primary mx-auto py-5 text-xl text-white"
   >
-    {currentLocale === "en" 
-      ? "Remember that prices and estimated times may vary depending on location and vehicle size."
-      : "Recuerda que los precios y tiempos estimados pueden variar según la ubicación y el tamaño del vehículo."}
+    {
+      currentLocale === "en"
+        ? "Remember that prices and estimated times may vary depending on location and vehicle size."
+        : "Recuerda que los precios y tiempos estimados pueden variar según la ubicación y el tamaño del vehículo."
+    }
   </div>
 </section>

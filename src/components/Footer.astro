@@ -24,7 +24,7 @@ const currentLocale = Astro.currentLocale || "en";
     <!-- Services -->
     <nav class="flex flex-col">
       <h6 class="footer-title text-xl text-base-content font-semibold mb-4">
-        SERVICES
+        {currentLocale === "en" ? "SERVICES" : "SERVICIOS"}
       </h6>
       <ul class="space-y-2">
         <li>
@@ -77,25 +77,6 @@ const currentLocale = Astro.currentLocale || "en";
                 d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
                 clip-rule="evenodd"></path>
             </svg>
-            {
-              currentLocale === "en"
-                ? "Automatic Tunnel Wash"
-                : "Lavado automático en túnel"
-            }
-          </a>
-        </li>
-        <li>
-          <a class="link link-hover text-lg flex items-center gap-2">
-            <svg
-              class="inline-block w-5 h-5 text-green-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M16.707 6.293a1 1 0 00-1.414 0L9 12.586l-2.293-2.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
             {currentLocale === "en" ? "Waxing & Polishing" : "Cera y pulido"}
           </a>
         </li>
@@ -113,8 +94,8 @@ const currentLocale = Astro.currentLocale || "en";
             </svg>
             {
               currentLocale === "en"
-                ? "Seat and Carpet Shampooing"
-                : "Shampoo de asientos y tapizados"
+                ? "Seat Washing"
+                : "Lavado de asientos"
             }
           </a>
         </li>
@@ -156,20 +137,20 @@ const currentLocale = Astro.currentLocale || "en";
         </li>
         <li>
           <a
-            href={currentLocale === "en" ? "/contact" : "/es/contact"}
-            class="link link-hover text-lg"
-          >
-            {currentLocale === "en" ? "CONTACT" : "CONTACTO"}
-          </a>
-        </li>
-        <li>
-          <a
             href={currentLocale === "en" ? "/services" : "/es/services"}
             class="link link-hover text-lg"
           >
             {currentLocale === "en" ? "SERVICES" : "SERVICIOS"}
           </a>
         </li>
+        <li>
+          <a
+            href={currentLocale === "en" ? "/contact" : "/es/contact"}
+            class="link link-hover text-lg"
+          >
+            {currentLocale === "en" ? "CONTACT" : "CONTACTO"}
+          </a>
+        </li>   
       </ul>
     </nav>
 
@@ -181,7 +162,7 @@ const currentLocale = Astro.currentLocale || "en";
       <div class="space-y-3">
         <div>
           <p class="text-lg font-medium">
-            {currentLocale === "en" ? "CALL US" : "LLAMANOS"}
+            {currentLocale === "en" ? "WRITE TO US" : "ESCRIBENOS"}
           </p>
           <p class="text-lg">+1 (279) 272-7136</p>
         </div>
@@ -264,8 +245,8 @@ const currentLocale = Astro.currentLocale || "en";
     <p class="text-center text-lg">
       {
         currentLocale === "en"
-          ? "Copyright © 2025 Mustang CarWash Mobile. All rights reserved."
-          : "Copyright © 2025 Mustang CarWash Mobile. Todos los derechos reservados."
+          ? "Copyright © 2025 WildHorse CarWash Mobile. All rights reserved."
+          : "Copyright © 2025 WildHorse CarWash Mobile. Todos los derechos reservados."
       }
       <br />
       <span

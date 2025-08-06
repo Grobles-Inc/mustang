@@ -190,22 +190,6 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="salon-wash-service"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Salon Wash Service"
-                          : "Servicio de lavado de salón"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
                       value="basic-package"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
@@ -238,17 +222,18 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="detailed-package"
+                      value="salon-wash-service"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Detailed Package"
-                          : "Paquete detallado"
+                          ? "Salon Wash Service"
+                          : "Servicio de lavado de salón"
                       }</span
                     >
                   </label>
+
                 </div>
                 <!-- Servicios individuales -->
                 <div>
@@ -264,13 +249,13 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="seat-washing"
+                      value="seat-cleaning"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Seat Washing"
+                          ? "Seat Cleaning"
                           : "Lavado de asientos"
                       }</span
                     >
@@ -280,13 +265,13 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="carpet-washing"
+                      value="carpet-cleaning"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Carpet Washing"
+                          ? "Carpet Cleaning"
                           : "Lavado de alfombras"
                       }</span
                     >
@@ -302,8 +287,8 @@ const currentLocale = Astro.currentLocale || "en";
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Ceiling Washing"
-                          : "Lavado de techo"
+                          ? "Ceiling stain removal"
+                          : "Desmanchado de techo"
                       }</span
                     >
                   </label>
@@ -312,14 +297,14 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="door-washing"
+                      value="interior-plastics-cleaning"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Door Washing"
-                          : "Lavado de puertas"
+                          ? "Cleaning and conditioning of interior plastics"
+                          : "Lavado y acondicionamiento de plásticos internos"
                       }</span
                     >
                   </label>
@@ -328,13 +313,13 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="body-washing"
+                      value="bodywork-cleaning"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Body Washing"
+                          ? "Bodywork Cleaning"
                           : "Lavado de carrocería"
                       }</span
                     >
@@ -344,92 +329,44 @@ const currentLocale = Astro.currentLocale || "en";
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="vacuuming"
+                      value="detailed-engine-cleaning"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Vacuuming of carpets, seats and trunk"
-                          : "Aspirado de alfombras, asientos y maletero"
+                          ? "Detailed engine cleaning"
+                          : "Lavado de motor al detalle"
                       }</span
                     >
                   </label>
-
                   <label class="flex items-center space-x-3 cursor-pointer">
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="interior-cleaning"
+                      value="paint-correction"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Interior cleaning of doors and dashboard"
-                          : "Limpieza interior de puertas y tablero"
+                          ? "Paint correction"
+                          : "Corrección de pintura"
                       }</span
                     >
                   </label>
-
                   <label class="flex items-center space-x-3 cursor-pointer">
                     <input
                       type="checkbox"
                       name="servicios"
-                      value="plastic-conditioner"
+                      value="polish-application"
                       class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <span class="text-xl text-gray-700"
                       >{
                         currentLocale === "en"
-                          ? "Conditioner for interior and exterior plastic parts"
-                          : "Acondicionador a las partes plásticas interior e exterior"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="air-application"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Air application to mirrors and handles"
-                          : "Aplicación de aire a los espejos y manijas"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="tire-conditioner"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Tire conditioner"
-                          : "Acondicionador de neumáticos"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="fragrance"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en" ? "Fragrance" : "Aromatizado"
+                          ? "Polish application"
+                          : "Aplicación de polish"
                       }</span
                     >
                   </label>
