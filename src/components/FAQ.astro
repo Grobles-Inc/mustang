@@ -76,21 +76,20 @@ const faqData = {
 const content = faqData[currentLocale as keyof typeof faqData];
 ---
 
-<section class="py-20 bg-base-100">
+<section class="py-20 bg-base-300">
   <div class="container mx-auto px-4 max-w-4xl">
     <!-- Header -->
-    <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-bold text-base-content mb-4 leading-[1.5]">
+    <div class="text-center mb-12 text-base-100" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-[1.5]">
         {content.title}
       </h2>
-      <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+      <p class="text-lg max-w-2xl mx-auto">
         {content.subtitle}
       </p>
-      <div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
     </div>
 
     <!-- FAQ Items -->
-    <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="space-y-4 text-base-100" data-aos="fade-up" data-aos-delay="200">
       {content.faqs.map((faq, index) => (
         <>
           <div class="collapse">
@@ -100,10 +99,10 @@ const content = faqData[currentLocale as keyof typeof faqData];
               id={`faq-${index}`}
               class="peer"
             />
-            <div class="collapse-title text-lg md:text-xl font-semibold text-base-content cursor-pointer">
+            <div class="collapse-title text-lg md:text-xl font-semibold cursor-pointer">
               {faq.question}
             </div>
-            <div class="collapse-content text-base-content/80">
+            <div class="collapse-content">
               <div class="pt-2 pb-4">
                 <p class="leading-relaxed text-lg">
                   {faq.answer}
@@ -112,7 +111,7 @@ const content = faqData[currentLocale as keyof typeof faqData];
             </div>
           </div>
           {index < content.faqs.length - 1 && (
-            <div class="border-t border-base-300 my-2"></div>
+            <div class="border-t border-base-100/50 my-2"></div>
           )}
         </>
       ))}

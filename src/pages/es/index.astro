@@ -11,70 +11,76 @@ import PackageSection from "@components/PackageSection.astro";
 	description="WildHorse CarWash Mobile es un servicio profesional de limpieza de coches que ofrece una gama de servicios para mantener su coche limpio y en su mejor estado."
 	image="/logoCarWash.png"
 >
-	<HeroSection />
-	<ServicesCard />
-	<PackageSection />
-
-	<div class="flex flex-col justify-center items-center mt-10 gap-4">
-		<img src="/logoCarWash.png" alt="logoCarWash" class="h-20 w-auto" />
-		<div class="w-px h-24 bg-black" data-aos="fade-up"></div>
-		<p class="text-center max-w-md text-xl" data-aos="fade-up">
-			Sabemos que tu coche es donde se crean recuerdos, donde la música suena a
-			todo volumen, y donde tu día comienza. Es parte de tu historia, y estamos
-			aquí para ayudarte a mantenerlo luciendo impecable.
-		</p>
-		<div
-			class="w-full flex flex-wrap justify-center gap-6 px-4 py-52 relative bg-center bg-cover mt-10 bg-scroll md:bg-fixed"
-			style={{
-				backgroundImage:
-					"url('https://images.unsplash.com/photo-1560037962-a00331b63f72?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-			}}
-		>
-		</div>
-	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-		<img
-			src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			alt="Men Cleaning Car"
-			class="w-full h-64 md:h-full object-cover rounded"
-		/>
-		<div class="p-6 md:p-10 flex flex-col justify-center">
-			<h2 class="text-2xl md:text-4xl font-bold leading-[1.5]" data-aos="fade-up">
-				El Servicio Premium de Lavado y Detallado de Coches de América
-			</h2>
-			<p
-				class="text-lg md:text-xl pt-4 md:pt-5"
-				data-aos="fade-up"
-				data-aos-delay="200"
-			>
-				Cuidando Coches con Precisión y Pasión por Más de 5 Años. En WildHorse CarWash Móvil, no solo lavamos coches, restauramos el orgullo de tu
-				vehículo. Con más de 5 años de experiencia, nuestro equipo experto combina
-				equipos de vanguardia, productos de alta calidad y técnicas probadas
-				para sacar lo mejor de cada vehículo. <br />
-				<br />
-				Desde lavados rápidos exprés hasta detallados completos de interior y exterior,
-				ofrecemos resultados superiores con una atención al detalle inigualable.
-				Cada servicio se realiza con cuidado, consistencia y un compromiso con la
-				excelencia.
-				<br /><br />
-				Nuestra misión es superar tus expectativas cada vez que nos visites. Utilizamos
-				soluciones de limpieza ecológicas para proteger tanto tu coche como el medio
-				ambiente.
+	<div class="bg-base-300">
+		<HeroSection />
+		<ServicesCard />
+		<PackageSection />
+{}
+		<div class="flex flex-col justify-center items-center mt-10 gap-4">
+			<img src="/logoWithBG.png" alt="logoCarWash" class="h-20 w-auto" />
+			<div class="w-px h-24 bg-base-100" data-aos="fade-up"></div>
+			<p class="text-center max-w-md text-xl text-base-100" data-aos="fade-up">
+				Sabemos que tu coche es donde se crean recuerdos, donde la música suena
+				a todo volumen, y donde tu día comienza. Es parte de tu historia, y
+				estamos aquí para ayudarte a mantenerlo luciendo impecable.
 			</p>
+			<div
+				class="w-full flex flex-wrap justify-center gap-6 px-4 py-52 relative bg-center bg-cover mt-10 bg-scroll md:bg-fixed"
+				style={{
+					backgroundImage:
+						"url('https://images.unsplash.com/photo-1560037962-a00331b63f72?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+				}}
+			>
+			</div>
 		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<img
+				src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				alt="Men Cleaning Car"
+				class="w-full h-64 md:h-full object-cover rounded"
+			/>
+			<div class="p-6 md:p-10 flex flex-col justify-center">
+				<h2
+					class="text-2xl md:text-4xl font-bold leading-[1.5] text-base-100"
+					data-aos="fade-up"
+				>
+					El Servicio Premium de Lavado y Detallado de Coches de América
+				</h2>
+				<p
+					class="text-lg md:text-xl pt-4 md:pt-5 text-base-100"
+					data-aos="fade-up"
+					data-aos-delay="200"
+				>
+					Cuidando Coches con Precisión y Pasión por Más de 5 Años. En WildHorse
+					CarWash Móvil, no solo lavamos coches, restauramos el orgullo de tu
+					vehículo. Con más de 5 años de experiencia, nuestro equipo experto
+					combina equipos de vanguardia, productos de alta calidad y técnicas
+					probadas para sacar lo mejor de cada vehículo. <br />
+					<br />
+					Desde lavados rápidos exprés hasta detallados completos de interior y exterior,
+					ofrecemos resultados superiores con una atención al detalle inigualable.
+					Cada servicio se realiza con cuidado, consistencia y un compromiso con
+					la excelencia.
+					<br /><br />
+					Nuestra misión es superar tus expectativas cada vez que nos visites. Utilizamos
+					soluciones de limpieza ecológicas para proteger tanto tu coche como el
+					medio ambiente.
+				</p>
+			</div>
+		</div>
+
+		<!-- Sección del formulario de contacto con imagen de fondo -->
+		<section
+			class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+			style="background-image: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+		>
+			<!-- Overlay con blur -->
+			<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+			<!-- Contenido del formulario -->
+			<div class="relative z-10">
+				<ContactForm />
+			</div>
+		</section>
 	</div>
-
-	<!-- Sección del formulario de contacto con imagen de fondo -->
-	<section
-		class="relative min-h-screen bg-cover bg-center bg-no-repeat"
-		style="background-image: url('https://images.unsplash.com/photo-1552930294-6b595f4c2974?q=80&w=1026&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
-	>
-		<!-- Overlay con blur -->
-		<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-
-		<!-- Contenido del formulario -->
-		<div class="relative z-10">
-			<ContactForm />
-		</div>
-	</section>
 </Page>
