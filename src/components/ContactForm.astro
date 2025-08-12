@@ -36,9 +36,7 @@ const currentLocale = Astro.currentLocale || "en";
             name="numero"
             required
             class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-            placeholder={currentLocale === "en"
-              ? "Phone number"
-              : "Número de teléfono"}
+            placeholder={currentLocale === "en" ? "Phone" : "Teléfono"}
           />
         </div>
 
@@ -50,7 +48,15 @@ const currentLocale = Astro.currentLocale || "en";
             class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
             placeholder={currentLocale === "en"
               ? "Car brand / Model"
-              : "Marca / Modelo"}
+              : "Marca Vehículo / Modelo"}
+          />
+        </div><div>
+          <input
+            type="text"
+            name="ubicacion"
+            required
+            class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
+            placeholder={currentLocale === "en" ? "Location" : "Ubicación"}
           />
         </div>
         <div>
