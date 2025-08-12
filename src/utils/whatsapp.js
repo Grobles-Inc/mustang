@@ -48,7 +48,7 @@ export function sendToWhatsApp(formData, phoneNumber = "12792727136", locale = "
       client: "*Client:*",
       phone: "*Phone:*",
       car: "*Car:*",
-      model: "*Model:*",
+      ubicacion: "*Ubicación:*",
       serviceDate: "*Service Date:*",
       requestedServices: "*Requested Services:*",
       noServices: "No services selected",
@@ -59,7 +59,7 @@ export function sendToWhatsApp(formData, phoneNumber = "12792727136", locale = "
       client: "*Cliente:*",
       phone: "*Teléfono:*",
       car: "*Carro:*",
-      model: "*Modelo:*",
+      ubicacion: "*Ubicación:*",
       serviceDate: "*Fecha del Servicio:*",
       requestedServices: "*Servicios Solicitados:*",
       noServices: "Ningún servicio seleccionado",
@@ -83,7 +83,7 @@ export function sendToWhatsApp(formData, phoneNumber = "12792727136", locale = "
   ${currentLabels.client} ${formData.nombre || currentLabels.notSpecified}
   ${currentLabels.phone} ${formData.numero || currentLabels.notSpecified}
   ${currentLabels.car} ${formData.carro || currentLabels.notSpecified}
-  ${currentLabels.model} ${formData.modelo || currentLabels.notSpecified}
+  ${currentLabels.ubicacion} ${formData.ubicacion || currentLabels.notSpecified}
   ${currentLabels.serviceDate} ${formData.fecha || currentLabels.notSpecified}
 
   ${currentLabels.requestedServices}
@@ -123,7 +123,7 @@ export function handleFormSubmit(event, phoneNumber = "12792727136", locale = "e
     nombre: formData.get('nombre'),
     numero: formData.get('numero'),
     carro: formData.get('carro'),
-    modelo: formData.get('modelo'),
+    ubicacion: formData.get('ubicacion'),
     fecha: formData.get('fecha'),
     servicios: formData.getAll('servicios')
   };
