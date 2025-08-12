@@ -6,397 +6,263 @@ const currentLocale = Astro.currentLocale || "en";
 
 <section class="py-20">
   <!-- Contenedor del formulario -->
-  <div class="flex items-center justify-center p-4" data-aos="fade-up">
-    <div
-      class="bg-white/60 bg-opacity-70 rounded-2xl shadow-2xl max-w-6xl w-full overflow-hidden"
-    >
-      <div class="grid md:grid-cols-2 gap-0">
-        <!-- Sección izquierda - Información -->
-        <div class="bg-gray-50/50 p-8 md:p-12">
-          <h2 class="text-4xl font-bold text-gray-800 mb-6">
-            {currentLocale === "en" ? "Got Questions?" : "¿Tienes preguntas?"}
-          </h2>
 
-          <div class="space-y-4 text-gray-700">
-            <p class="text-xl leading-relaxed">
-              {
-                currentLocale === "en"
-                  ? "Enquire today about our services, or advice on how to best care for your car. Use the form to get in touch or call or email us directly. Check out our frequently asked questions for more information."
-                  : "Consulta hoy sobre nuestros servicios, o asesoría sobre cómo cuidar mejor tu automóvil. Usa el formulario para contactarnos o llama o envíanos un correo electrónico. Revisa nuestras preguntas frecuentes para obtener más información."
-              }
-            </p>
-            <p class="text-xl leading-relaxed">
-              {
-                currentLocale === "en"
-                  ? "Enquire today about our services, or advice on how to best care for your car. Use the form to get in touch or call or email us directly. Check out our frequently asked questions for more information."
-                  : "Consulta hoy sobre nuestros servicios, o asesoría sobre cómo cuidar mejor tu automóvil. Usa el formulario para contactarnos o llama o envíanos un correo electrónico. Revisa nuestras preguntas frecuentes para obtener más información."
-              }
-            </p>
-          </div>
+  <div
+    class="bg-white bg-opacity-70 p-8 mx-auto max-w-2xl rounded-2xl shadow-2xl w-full overflow-hidden"
+    data-aos="fade-up"
+  >
+    <!-- Sección derecha - Formulario -->
 
-          <div class="mt-8 pt-6 border-t border-gray-300">
-            <div class="space-y-3">
-              <div class="flex items-center space-x-3">
-                <svg
-                  class="w-5 h-5 text-gray-800"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-                  ></path>
-                  <path
-                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-                  ></path>
-                </svg>
-                <span class="text-gray-800 text-lg"
-                  >{
-                    currentLocale === "en"
-                      ? "contact@contact.com"
-                      : "contact@contact.com"
-                  }</span
-                >
-              </div>
-              <div class="flex items-center space-x-3">
-                <svg
-                  class="w-5 h-5 text-gray-800"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-                  ></path>
-                </svg>
-                <span class="text-gray-800 text-lg"
-                  >{
-                    currentLocale === "en"
-                      ? "+1 (279) 272-7136"
-                      : "+1 (279) 272-7136"
-                  }</span
-                >
-              </div>
-            </div>
-          </div>
+    <h3 class="text-xl font-bold text-gray-800 mb-8">
+      {currentLocale === "en" ? "BOOK A SERVICE" : "RESERVAR UN SERVICIO"}
+    </h3>
+
+    <form class="space-y-6" id="contactForm">
+      <!-- Campos de entrada -->
+      <div class="space-y-4">
+        <div>
+          <input
+            type="text"
+            name="nombre"
+            required
+            class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
+            placeholder={currentLocale === "en" ? "Name" : "Nombres"}
+          />
         </div>
 
-        <!-- Sección derecha - Formulario -->
-        <div class="p-8 md:p-12">
-          <h3 class="text-xl font-bold text-gray-800 mb-8">
-            {
-              currentLocale === "en"
-                ? "CONSULT A SERVICE"
-                : "CONSULTAR UN SERVICIO"
-            }
-          </h3>
+        <div>
+          <input
+            type="tel"
+            name="numero"
+            required
+            class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
+            placeholder={currentLocale === "en"
+              ? "Phone number"
+              : "Número de teléfono"}
+          />
+        </div>
 
-          <form class="space-y-6" id="contactForm">
-            <!-- Campos de entrada -->
-            <div class="space-y-4">
-              <div>
-                <label class="block text-xl font-medium text-gray-700 mb-2">
-                  {currentLocale === "en" ? "Name" : "Nombre"}
-                  <span class="text-blue-500">•</span>
-                </label>
-                <input
-                  type="text"
-                  name="nombre"
-                  required
-                  class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder={currentLocale === "en"
-                    ? "Your full name"
-                    : "Tu nombre completo"}
-                />
-              </div>
-
-              <div>
-                <label class="block text-xl font-medium text-gray-700 mb-2">
-                  {currentLocale === "en" ? "Phone" : "Teléfono"}
-                  <span class="text-blue-500">•</span>
-                </label>
-                <input
-                  type="tel"
-                  name="numero"
-                  required
-                  class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder={currentLocale === "en"
-                    ? "Your phone number"
-                    : "Tu número de teléfono"}
-                />
-              </div>
-
-              <div>
-                <label class="block text-xl font-medium text-gray-700 mb-2">
-                  {currentLocale === "en" ? "Car" : "Coche"}
-                  <span class="text-blue-500">•</span>
-                </label>
-                <input
-                  type="text"
-                  name="carro"
-                  required
-                  class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder={currentLocale === "en"
-                    ? "Car brand"
-                    : "Marca del coche"}
-                />
-              </div>
-
-              <div>
-                <label class="block text-xl font-medium text-gray-700 mb-2">
-                  {currentLocale === "en" ? "Car Model" : "Modelo del coche"}
-                  <span class="text-blue-500">•</span>
-                </label>
-                <input
-                  type="text"
-                  name="modelo"
-                  required
-                  class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                  placeholder={currentLocale === "en"
-                    ? "Car model"
-                    : "Modelo del coche"}
-                />
-              </div>
-
-              <div>
-                <label class="block text-xl font-medium text-gray-700 mb-2">
-                  {currentLocale === "en" ? "Service Day" : "Día de servicio"}
-                  <span class="text-blue-500">•</span>
-                </label>
-                <input
-                  type="date"
-                  name="fecha"
-                  required
-                  class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
-                />
-              </div>
-            </div>
-
-            <!-- Sección de servicios -->
-            <div class="mt-8">
-              <h4 class="text-xl font-bold text-gray-800 mb-4">
-                {
-                  currentLocale === "en"
-                    ? "SERVICE(S) CONSULT"
-                    : "CONSULTAR SERVICIO(S)"
-                }
-              </h4>
-              <div class="space-y-3">
-                <!-- Paquetes -->
-                <div class="border-b border-gray-200 pb-4 mb-4">
-                  <h5 class="text-lg font-semibold text-gray-700 mb-3">
-                    {currentLocale === "en" ? "Packages" : "Paquetes"}
-                  </h5>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="basic-package"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Basic Package"
-                          : "Paquete básico"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="premium-package"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Premium Package"
-                          : "Paquete premium"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="salon-wash-service"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Salon Wash Service"
-                          : "Servicio de lavado de salón"
-                      }</span
-                    >
-                  </label>
-
-                </div>
-                <!-- Servicios individuales -->
-                <div>
-                  <h5 class="text-lg font-semibold text-gray-700 mb-3">
-                    {
-                      currentLocale === "en"
-                        ? "Individual Services"
-                        : "Servicios Individuales"
-                    }
-                  </h5>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="seat-cleaning"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Seat Cleaning"
-                          : "Lavado de asientos"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="carpet-cleaning"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Carpet Cleaning"
-                          : "Lavado de alfombras"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="ceiling-washing"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Ceiling stain removal"
-                          : "Desmanchado de techo"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="interior-plastics-cleaning"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Cleaning and conditioning of interior plastics"
-                          : "Lavado y acondicionamiento de plásticos internos"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="bodywork-cleaning"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Bodywork Cleaning"
-                          : "Lavado de carrocería"
-                      }</span
-                    >
-                  </label>
-
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="detailed-engine-cleaning"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Detailed engine cleaning"
-                          : "Lavado de motor al detalle"
-                      }</span
-                    >
-                  </label>
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="paint-correction"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Paint correction"
-                          : "Corrección de pintura"
-                      }</span
-                    >
-                  </label>
-                  <label class="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      name="servicios"
-                      value="polish-application"
-                      class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                    <span class="text-xl text-gray-700"
-                      >{
-                        currentLocale === "en"
-                          ? "Polish application"
-                          : "Aplicación de polish"
-                      }</span
-                    >
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <!-- Botón de envío -->
-            <button
-              type="submit"
-              class="w-full mt-8 bg-white border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-2xl font-medium hover:bg-primary hover:text-white transition duration-300 flex items-center justify-center space-x-2 text-2xl cursor-pointer group"
-            >
-              <span>{currentLocale === "en" ? "Send" : "Enviar"}</span>
-              <svg
-                class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </form>
+        <div>
+          <input
+            type="text"
+            name="carro"
+            required
+            class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
+            placeholder={currentLocale === "en"
+              ? "Car brand / Model"
+              : "Marca / Modelo"}
+          />
+        </div>
+        <div>
+          <label class="block text-xl font-medium text-gray-700 mb-2">
+            {currentLocale === "en" ? "Service Day" : "Día de servicio"}
+          </label>
+          <input
+            type="date"
+            name="fecha"
+            required
+            class="w-full border-b-2 border-gray-300 focus:border-blue-500 outline-none py-2 transition-colors text-xl"
+          />
         </div>
       </div>
-    </div>
+
+      <!-- Sección de servicios -->
+      <div class="mt-8">
+        <div class="space-y-3">
+          <!-- Paquetes -->
+          <div class="border-b border-gray-200 pb-4 mb-4">
+            <h5 class="text-lg font-semibold text-gray-700 mb-3">
+              {currentLocale === "en" ? "Packages" : "Paquetes"}
+            </h5>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="basic-package"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en" ? "Basic Package" : "Paquete básico"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="premium-package"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en" ? "Premium Package" : "Paquete premium"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="salon-wash-service"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Salon Wash Service"
+                    : "Servicio de lavado de salón"
+                }</span
+              >
+            </label>
+          </div>
+          <!-- Servicios individuales -->
+          <div>
+            <h5 class="text-lg font-semibold text-gray-700 mb-3">
+              {
+                currentLocale === "en"
+                  ? "Individual Services"
+                  : "Servicios Individuales"
+              }
+            </h5>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="seat-cleaning"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Seat Cleaning"
+                    : "Lavado de asientos"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="carpet-cleaning"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Carpet Cleaning"
+                    : "Lavado de alfombras"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="ceiling-washing"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Ceiling stain removal"
+                    : "Desmanchado de techo"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="interior-plastics-cleaning"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Cleaning and conditioning of interior plastics"
+                    : "Lavado y acondicionamiento de plásticos internos"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="bodywork-cleaning"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Bodywork Cleaning"
+                    : "Lavado de carrocería"
+                }</span
+              >
+            </label>
+
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="detailed-engine-cleaning"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Detailed engine cleaning"
+                    : "Lavado de motor al detalle"
+                }</span
+              >
+            </label>
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="paint-correction"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Paint correction"
+                    : "Corrección de pintura"
+                }</span
+              >
+            </label>
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="servicios"
+                value="polish-application"
+                class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span class="text-xl text-gray-700"
+                >{
+                  currentLocale === "en"
+                    ? "Polish application"
+                    : "Aplicación de polish"
+                }</span
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón de envío -->
+      <button type="submit" class="btn btn-primary btn-lg w-full py-4">
+        <span>{currentLocale === "en" ? "Book now" : "Reservar"}</span>
+      </button>
+    </form>
   </div>
 </section>
 
@@ -407,9 +273,10 @@ const currentLocale = Astro.currentLocale || "en";
     if (form) {
       form.addEventListener("submit", function (event) {
         // Obtener el idioma actual desde el atributo data o desde la URL
-        const currentLocale = document.documentElement.lang || 
-                             (window.location.pathname.includes('/es/') ? 'es' : 'en');
-        
+        const currentLocale =
+          document.documentElement.lang ||
+          (window.location.pathname.includes("/es/") ? "es" : "en");
+
         handleFormSubmit(event, "12792727136", currentLocale);
       });
     }
