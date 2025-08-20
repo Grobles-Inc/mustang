@@ -36,8 +36,10 @@ const whatsappLabel = whatsappLabels[localeKey];
 <html lang={currentLocale} data-theme="carwash">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/faviconCar.ico" />
-    <link rel="icon" type="image/x-icon" href="/faviconCar.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logoCarWash.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     
@@ -59,6 +61,11 @@ const whatsappLabel = whatsappLabels[localeKey];
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image || "/logoCarWash.png"} />
+    
+    <!-- Favicon meta tags para diferentes dispositivos -->
+    <meta name="theme-color" content="#de652f" />
+    <meta name="msapplication-TileImage" content="/logoCarWash.png" />
+    <meta name="msapplication-TileColor" content="#de652f" />
     
     <!-- Hreflang para internacionalización -->
     <link rel="alternate" hreflang="en" href={url.origin} />
