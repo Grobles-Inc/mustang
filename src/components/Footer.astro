@@ -4,7 +4,6 @@ const message: Record<string, string> = {
   en: "Hello, I'm interested in your services.",
   es: "Hola, estoy interesado en sus servicios.",
 };
-
 ---
 
 <footer class="footer bg-base-300 text-base-100 p-10">
@@ -167,6 +166,12 @@ const message: Record<string, string> = {
           </p>
           <p class="text-lg">+1 (279) 272-7136</p>
         </div>
+        <div>
+          <p class="text-lg font-medium">
+            {currentLocale === "en" ? "MAIL US" : "ENVIANOS UN EMAIL"}
+          </p>
+          <p class="text-lg">contact@wildhorsecarwashmobile.com</p>
+        </div>
 
         <!-- Social Icons -->
         <div class="flex gap-3 mt-4">
@@ -230,9 +235,8 @@ const message: Record<string, string> = {
       <br />
       <span
         >{currentLocale === "en" ? "Developed by" : "Desarrollado por"}
-        <a
-          href="https://groblesolutions.netlify.app/"
-          class="text-primary underline">Grobles Solutions.</a
+        <a href="https://groblesolutions.netlify.app/" class="text-primary"
+          >Grobles Inc.</a
         ></span
       >
     </p>

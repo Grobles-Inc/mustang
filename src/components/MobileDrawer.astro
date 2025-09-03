@@ -3,7 +3,7 @@ const currentLocale = Astro.currentLocale || "en";
 ---
 
 <!-- Mobile Drawer Sidebar -->
-<div class="drawer-side z-50 ">
+<div class="drawer-side z-50">
   <label for="drawer-toggle" aria-label="close sidebar" class="drawer-overlay"
   ></label>
   <aside class="min-h-full w-80 p-4 bg-base-300">
@@ -37,7 +37,7 @@ const currentLocale = Astro.currentLocale || "en";
       </li>
       <li class="mt-4">
         <a
-          href={currentLocale === "en" ? "/book" : "/es/book"}
+          href={currentLocale === "en" ? "/contact" : "/es/contact"}
           class="btn btn-primary w-full gap-2 bg-base-300 text-primary lg:flex text-xl border border-l-10"
         >
           <svg
